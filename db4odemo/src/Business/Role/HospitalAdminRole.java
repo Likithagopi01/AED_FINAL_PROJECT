@@ -9,6 +9,6 @@ package Business.Role;
  *
  * @author Ash
  */
-public class DeliverManRole {
+public class HospitalAdminRole {
     
 }
