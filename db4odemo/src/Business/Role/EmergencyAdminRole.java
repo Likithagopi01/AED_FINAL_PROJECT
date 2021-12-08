@@ -9,6 +9,16 @@ package Business.Role;
  *
  * @author Ash
  */
-public class EmergencyAdminRole {
+import Business.EcoSystem;
+import Business.UserAccount.UserAccount;
+import javax.swing.JPanel;
+import userinterface.EmergencyAdmin.EmergencyAdminJPanel;
+
+public class EmergencyAdminRole extends Role {
+    
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+        return new EmergencyAdminJPanel(userProcessContainer,account, business); 
+    }
     
 }

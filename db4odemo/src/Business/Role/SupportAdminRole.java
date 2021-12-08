@@ -9,6 +9,16 @@ package Business.Role;
  *
  * @author Ash
  */
-public class SupportAdminRole {
+import Business.EcoSystem;
+import Business.Role.Role;
+import Business.UserAccount.UserAccount;
+import javax.swing.JPanel;
+import userinterface.SupportAdmin.SupportJPanel;
+
+public class SupportAdminRole extends Role {
+    
+     @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+       return new SupportJPanel(userProcessContainer, business,account);  }
     
 }
