@@ -5,11 +5,14 @@
  */
 package Business.Employee;
 
+import Business.Doctor.DoctorDirectory;
+
 /**
  *
  * @author Ash
  */
 public class Employee {
+    
     private String name;
     private String city;
     
