@@ -9,6 +9,18 @@ package Business.Role;
  *
  * @author Ash
  */
-public class HospitalAdminRole {
+import Business.EcoSystem;
+import Business.Organization;
+import Business.UserAccount.UserAccount;
+import userinterface.HospitalAdminRole.AdminWorkAreaJPanel;
+import javax.swing.JPanel;
+
+public class HospitalAdminRole extends Role {
+    
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+        return new AdminWorkAreaJPanel(userProcessContainer,business,account);
+    }
+
     
 }

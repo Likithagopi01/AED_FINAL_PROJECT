@@ -9,6 +9,16 @@ package Business.Role;
  *
  * @author Ash
  */
-public class InsuranceAdminRole {
+import Business.EcoSystem;
+import Business.UserAccount.UserAccount;
+import javax.swing.JPanel;
+import userinterface.InsuranceAdmin.InsuranceAdminJPanel;
+
+public class InsuranceAdminRole extends Role {
     
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+        return new InsuranceAdminJPanel(userProcessContainer,business,account);
+    }
+
 }

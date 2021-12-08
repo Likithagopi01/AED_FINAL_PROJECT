@@ -9,6 +9,17 @@ package Business.Role;
  *
  * @author Ash
  */
-public class LabAdminRole {
+import Business.EcoSystem;
+import Business.UserAccount.UserAccount;
+import javax.swing.JPanel;
+import userinterface.Labadmin.LabAdminJPanel;
+
+public class LabAdminRole extends Role {
+    
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+         return new LabAdminJPanel(userProcessContainer, business, account);
+    }
+    
     
 }
