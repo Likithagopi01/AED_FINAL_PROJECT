@@ -6,9 +6,11 @@
 package Business;
 
 
-import Business.Customer.CustomerDirectory;
+
 import Business.DeliveryMan.DeliveryManDirectory;
-import Business.Restaurant.RestaurantDirectory;
+import Business.Doctor.DoctorDirectory;
+import Business.Patient.PatientDirectory;
+import Business.HospitalAdmin.HospitalDirectory;
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
 import java.util.ArrayList;
@@ -18,24 +20,40 @@ import java.util.ArrayList;
  * @author MyPC1
  */
 public class EcoSystem extends Organization{
-    
+    private ArrayList<Network> networkList; 
     private static EcoSystem business;
-    private RestaurantDirectory restaurantDirectory;
-    private CustomerDirectory customerDirectory;
-    private DeliveryManDirectory deliveryManDirectory;
-
-    public EcoSystem(RestaurantDirectory restaurantDirectory, CustomerDirectory customerDirectory, DeliveryManDirectory deliveryManDirectory) {
-
-        this.restaurantDirectory = restaurantDirectory;
-        this.customerDirectory = customerDirectory;
-        this.deliveryManDirectory = deliveryManDirectory;
+  public Network createNetwork(String name){
+      
+        Network network=new Network();
+        network.setName(name);
+        networkList.add(network);
+        return network;
     }
-    
+     public Network findNetwork(String name){
+        
+         
+         for(Network net : networkList){
+             if(net.getName().equals(name)){
+                 return net;
+             }
+         }
+         return null;
+     }
+
+   
     public static EcoSystem getInstance(){
         if(business==null){
             business=new EcoSystem();
         }
         return business;
+    }
+
+    public ArrayList<Network> getNetworkList() {
+        return networkList;
+    }
+
+    public void setNetworkList(ArrayList<Network> networkList) {
+        this.networkList = networkList;
     }
     
     @Override
@@ -46,7 +64,7 @@ public class EcoSystem extends Organization{
     }
     private EcoSystem(){
         super(null);
-       // networkList=new ArrayList<Network>();
+        networkList=new ArrayList<Network>();
     }
 
     
