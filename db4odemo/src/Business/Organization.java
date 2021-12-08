@@ -4,7 +4,10 @@
  */
 package Business;
 
+import Business.DeliveryMan.DeliveryManDirectory;
+import Business.Doctor.DoctorDirectory;
 import Business.Employee.EmployeeDirectory;
+import Business.Patient.PatientDirectory;
 import Business.Role.Role;
 import Business.UserAccount.UserAccountDirectory;
 import Business.WorkQueue.WorkQueue;
@@ -16,18 +19,47 @@ import java.util.ArrayList;
  */
 public abstract class Organization {
 
-    private String name;
+     String name;
+     Type enterpriseType1;
+      
+
+    public Type getEnterpriseType1() {
+        return enterpriseType1;
+    }
+
+    public void setEnterpriseType1(Type enterpriseType) {
+        this.enterpriseType1 = enterpriseType;
+    }
+//    public void getDirectory(String type) {
+//        if(type.equals("Doctor")){
+//            getDoctorDirectory();
+//        }else if(type.equals("Patient")){
+//            getPatientDirectory();
+//        }
+//        else if(type.equals("DeliveryMan")){
+//            getDeliveryManDirectory();
+//        }
+   
+    
     private WorkQueue workQueue;
     private EmployeeDirectory employeeDirectory;
     private UserAccountDirectory userAccountDirectory;
+   
     private int organizationID;
-    private static int counter=0;
+    private static int counter=1;
     
     public enum Type{
-        RestaurantAdmin("RestaurantAdmin"),
-        Customer("Customer"),
-        DeliveryMan("Delivery"),
-        SysAdmin("Sysadmin");
+        HospitalAdmin("HospitalAdmin"),
+        Patient("Patient"),
+        DeliveryMan("DeliveryMan"),
+        SysAdmin("Sysadmin"),
+        LabAdmin("LabAdmin"),
+        InsuranceAdmin("InsuranceAdmin"),
+        Doctor("Doctor"),
+        SupportAdmin("SupportAdmin"),
+        EmergencyAdmin("EmergencyAdmin"),
+        SupplierAdmin("SupplierAdmin"),
+        PharamacyAdmin("PharamacyAdmin");
         
         private String value;
         private Type(String value) {
@@ -43,6 +75,7 @@ public abstract class Organization {
         workQueue = new WorkQueue();
         employeeDirectory = new EmployeeDirectory();
         userAccountDirectory = new UserAccountDirectory();
+       
         organizationID = counter;
         ++counter;
     }
