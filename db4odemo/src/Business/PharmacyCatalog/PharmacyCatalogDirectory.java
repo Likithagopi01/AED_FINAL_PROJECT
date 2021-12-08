@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Tharoon
+ * @author Ash
  */
 public class PharmacyCatalogDirectory {
 
