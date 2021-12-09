@@ -19,6 +19,15 @@ public abstract class WorkRequest {
     private String status;
     private Date requestDate;
     private Date resolveDate;
+
+    public UserAccount getDeliveryMan() {
+        return deliveryMan;
+    }
+
+    public void setDeliveryMan(UserAccount deliveryMan) {
+        this.deliveryMan = deliveryMan;
+    }
+    private UserAccount deliveryMan;
     
     public WorkRequest(){
         requestDate = new Date();
@@ -66,6 +75,11 @@ public abstract class WorkRequest {
 
     public Date getResolveDate() {
         return resolveDate;
+    }
+
+    @Override
+    public String toString() {
+        return sender.getEmployee().getName();
     }
 
     public void setResolveDate(Date resolveDate) {
