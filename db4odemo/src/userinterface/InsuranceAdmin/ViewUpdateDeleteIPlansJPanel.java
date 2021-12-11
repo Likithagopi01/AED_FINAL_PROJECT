@@ -3,8 +3,8 @@ package userinterface.InsuranceAdmin;
 
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
-import Business.InsuraceAdmin.InsurancePlan;
-import Business.InsuraceAdmin.InsuranceeAdmin;
+import Business.InsuranceAdmin.InsurancePlan;
+import Business.InsuranceAdmin.InsuranceeAdmin;
 
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;

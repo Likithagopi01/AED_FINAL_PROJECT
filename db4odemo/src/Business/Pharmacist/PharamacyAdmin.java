@@ -5,11 +5,6 @@
  */
 package Business.Pharmacist;
 
-/**
- *
- * @author Ash
- */
-
 import Business.Organization;
 import Business.PharmacyCatalog.PharmacyCatalogDirectory;
 import Business.Role.LabAdminRole;
@@ -17,8 +12,12 @@ import Business.Role.PharamacyAdminRole;
 import Business.Role.Role;
 import java.util.ArrayList;
 
-public class PharamacyAdmin extends Organization {
-    
+/**
+ *
+ * @author Ash
+ *
+ */
+public class PharamacyAdmin extends Organization{
     private String name;
     private String pharlocation;
 
@@ -56,5 +55,4 @@ public class PharamacyAdmin extends Organization {
         roles.add(new PharamacyAdminRole());
         return roles;
     }
-    
 }

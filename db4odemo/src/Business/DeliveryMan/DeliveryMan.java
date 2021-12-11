@@ -5,19 +5,18 @@
  */
 package Business.DeliveryMan;
 
-/**
- *
- * @author Ash
- */
 import Business.Organization;
 import Business.Role.DeliverManRole;
 import Business.Role.PharamacyAdminRole;
 import Business.Role.Role;
 import java.util.ArrayList;
 
-public class DeliveryMan extends Organization {
-    
-    String deliveryManName;
+/**
+ *
+ * @author harold
+ */
+public class DeliveryMan extends Organization{
+       String deliveryManName;
     
 
     public String getDeliveryManName() {
@@ -42,6 +41,5 @@ public class DeliveryMan extends Organization {
         roles.add(new DeliverManRole());
         return roles;
     }
-    
     
 }

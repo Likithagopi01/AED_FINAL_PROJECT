@@ -5,7 +5,7 @@
  */
 package Business.WorkQueue;
 
-import Business.InsuraceAdmin.InsurancePlan;
+import Business.InsuranceAdmin.InsurancePlan;
 
 /**
  *
