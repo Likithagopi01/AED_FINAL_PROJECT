@@ -9,11 +9,10 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Ash
+ * @author harold
  */
-public class DeiveryManDirectory {
-    
-     ArrayList<DeliveryMan> deliveryList;
+public class DeliveryManDirectory {
+            ArrayList<DeliveryMan> deliveryList;
     
     public DeliveryManDirectory(){
         this.deliveryList = new ArrayList();
@@ -52,5 +51,4 @@ public class DeiveryManDirectory {
    public void deleteDeliveryMan(DeliveryMan deliveryMan){
        deliveryList.remove(deliveryMan);
    }
-    
 }
