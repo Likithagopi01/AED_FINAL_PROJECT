@@ -74,11 +74,11 @@ public class DoctorAdminJPanel extends javax.swing.JPanel {
 //                System.out.println("comm" + ((BookAppointment) wq).getComments());
            Object row[] = new Object[5];
             row[0] = wq.getSender().getEmployee().getName();
-//            System.out.println("meds are" +((BookAppointment) wq).getMeds().getMedicines());
+            System.out.println("meds are" +((BookAppointment) wq).getMeds().getMedicines());
             
                 for(int i=1;i<=(((BookAppointment) wq).getMeds().getMedicines()).size();i++){
                     for(String m:((BookAppointment) wq).getMeds().getMedicines()){
-//                    System.out.println(((BookAppointment) wq).getMeds().getMedicines());
+                    System.out.println(((BookAppointment) wq).getMeds().getMedicines().size());
                     row[i] = m;
                     i++;
             }
@@ -158,7 +158,7 @@ public class DoctorAdminJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 693, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()

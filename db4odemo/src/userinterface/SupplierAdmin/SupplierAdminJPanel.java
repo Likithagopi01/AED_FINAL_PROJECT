@@ -94,6 +94,7 @@ public class SupplierAdminJPanel extends javax.swing.JPanel {
         userProcessContainer.add("ManageOrders", manageOrders);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

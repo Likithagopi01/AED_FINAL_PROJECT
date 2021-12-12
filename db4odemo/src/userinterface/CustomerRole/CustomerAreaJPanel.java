@@ -354,7 +354,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         restList2.removeAllItems();
         docname = String.valueOf(restList1.getSelectedItem());
-        System.out.println(docname +" asasas");
+        System.out.println(docname + " asasas");
         populateComboBox2(docname);
 
     }//GEN-LAST:event_restList1ActionPerformed
@@ -381,76 +381,30 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(hospitalName).getOrganizationDirectory().getDoctorDirectory().findDoctor(docname).updateTimings(timings);
         JOptionPane.showMessageDialog(this, "Appointment fixed");
         dB4OUtil.storeSystem(system);
-        //          System.out.println("timings " + timings);
-        //        if(system.getHospitalDirectory().findHospital(hospitalName).getDoctorDirectory().findDoctor(docname).getDoctorPatientList()==null){
-            //        Patient pa =new Patient();
-            //        ArrayList<Patient> paa = new ArrayList<>();
-            //        pa.setName(user.getEmployee().getName());
-            //        pa.setSymtoms(jTextArea1.getText());
-            //        system.getHospitalDirectory().findHospital(hospitalName).getDoctorDirectory().findDoctor(docname).updateTimings(timings);
-            //        paa.add(pa);
-            //        system.getHospitalDirectory().findHospital(hospitalName).getDoctorDirectory().findDoctor(docname).updateTimings(timings);
-            //        system.getHospitalDirectory().findHospital(hospitalName).getDoctorDirectory().findDoctor(docname).setDoctorPatientList(paa);
-            //        }else{
-            //            Patient pa =new Patient();
-            //        pa.setName(user.getEmployee().getName());
-            //        pa.setSymtoms(jTextArea1.getText());
-            //            System.out.println(system.getHospitalDirectory().findHospital(hospitalName).getDoctorDirectory().findDoctor(docname).getTimings());
-            //        system.getHospitalDirectory().findHospital(hospitalName).getDoctorDirectory().findDoctor(docname).updateTimings(timings);
-            //
-            //         system.getHospitalDirectory().findHospital(hospitalName).getDoctorDirectory().findDoctor(docname).addPatientsToDoctor(pa);
-            //        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        DefaultTableModel dtm = (DefaultTableModel) doctorDetails1.getModel();
+          DefaultTableModel dtm = (DefaultTableModel) doctorDetails1.getModel();
         dtm.setRowCount(0);
-
+       
         for(WorkRequest wq : system.getWorkQueue().findWorkRequestByRec(user)) {
             if(wq instanceof BookAppointment){
                 if(wq.getSender().getEmployee().getName().equals(user.getEmployee().getName())){
-                    System.out.println("comm" + ((BookAppointment) wq).getComments());
-                    Object row[] = new Object[5];
-                    row[0] = wq.getSender().getEmployee().getName();
-                    row[1] = ((BookAppointment) wq).getMeds().getMedicines().get(0);
-                    row[2] = ((BookAppointment) wq).getMeds().getMedicines().get(1);
-                    row[3] = ((BookAppointment) wq).getMeds().getMedicines().get(2);
-                    row[4]=((BookAppointment) wq).getComments();
-                    dtm.addRow(row);
-                }}}
+                System.out.println("comm" + ((BookAppointment) wq).getComments());
+           Object row[] = new Object[5];
+            row[0] = wq.getSender().getEmployee().getName();
+            row[1] = ((BookAppointment) wq).getMeds().getMedicines().get(0);
+            row[2] = ((BookAppointment) wq).getMeds().getMedicines().get(1);
+            row[3] = ((BookAppointment) wq).getMeds().getMedicines().get(2);
+            row[4]=((BookAppointment) wq).getComments();
+            dtm.addRow(row);
+            }}}
+           
+        
 
-                //System.out.println("Res len "+ system.getDoctorDirectory().getDoctorList());
-                //        System.out.println("hooooo" + hospitalName);
-                //         for(int i = 0;i< system.getHospitalDirectory().getHospitalList().size();i++){
-                    //              for(int j = 0;j< system.getHospitalDirectory().getHospitalList().get(i).getDoctorDirectory().getDoctorList().size();j++){
-                        //                   for(int k = 0;k< system.getHospitalDirectory().getHospitalList().get(i).getDoctorDirectory().getDoctorList().get(j).getDoctorPatientList().size();k++){
-                            //                       System.out.println(system.getHospitalDirectory().getHospitalList().get(i).getDoctorDirectory().getDoctorList().get(j).getDoctorPatientList().get(k).getName());
-                            //                       System.out.println(user.getEmployee().getName());
-                            //             if(user.getEmployee().getName().equals(system.getHospitalDirectory().getHospitalList().get(i).getDoctorDirectory().getDoctorList().get(j).getDoctorPatientList().get(k).getName())){
-                                //                 System.out.println("true1 true1 true1");
-                                //
-                                //
-                                //                array1.add(system.getHospitalDirectory().getHospitalList().get(i).getDoctorDirectory().getDoctorList().get(j).getDoctorPatientList().get(k));
-                                //             }else{
-                                //                 System.out.println("nothing");
-                                //
-                                //             }}}
-                    //         }
-                //        for(Patient pa :array1) {
-                    //
-                    //            if(pa.getName().equals(user.getEmployee().getName())){
-                        //                 Object row[] = new Object[5];
-                        //            row[0] = pa;
-                        //            row[1] = pa.getMedicine().getMedicines().get(0);
-                        //             row[2] = pa.getMedicine().getMedicines().get(1);
-                        //              row[3] = pa.getMedicine().getMedicines().get(2);
-                        //               row[4] = pa.getComments();
-                        //            dtm.addRow(row);
-                        //            }
-                    //
-                    //        }
-                jPanel1.setVisible(true);
+         jPanel1.setVisible(true);
 
     }//GEN-LAST:event_jButton2ActionPerformed
 

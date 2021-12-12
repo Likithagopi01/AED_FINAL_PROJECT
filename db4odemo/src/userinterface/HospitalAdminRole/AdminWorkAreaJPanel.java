@@ -149,6 +149,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_userJButtonActionPerformed
 
     private void manageOrganizationJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrganizationJButtonActionPerformed
+       
         DoctorJPanel doctorJPanel = new DoctorJPanel(userProcessContainer,system,user);
         userProcessContainer.add("Doctors", doctorJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();

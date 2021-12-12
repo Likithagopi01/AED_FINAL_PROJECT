@@ -31,8 +31,8 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
     UserAccount userAccount;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     
-    
-public ManageOrdersJPanel(JPanel userProcessContainer,UserAccount userAccount, EcoSystem system) {
+
+    public ManageOrdersJPanel(JPanel userProcessContainer,UserAccount userAccount, EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount= userAccount;
@@ -102,13 +102,16 @@ public ManageOrdersJPanel(JPanel userProcessContainer,UserAccount userAccount, E
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-
-int selectedRow = bookedTestTable.getSelectedRow();
+        
+        int selectedRow = bookedTestTable.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row.");
 
         } else {
             WorkRequest request = (WorkRequest) bookedTestTable.getValueAt(selectedRow, 0);
+//            System.out.println(workRequestJTable.getValueAt(selectedRow, 1));
+//            System.out.println(workRequestJTable.getValueAt(selectedRow, 0));
+//            System.out.println((request instanceof PlaceNewOrderWorkRequest));
             if (request instanceof OrderInventoryWorkRequest) {
                 OrderInventoryWorkRequest placeWorkRequest = (OrderInventoryWorkRequest) bookedTestTable.getValueAt(selectedRow, 0);
                 System.out.println(placeWorkRequest.getClass());
@@ -149,11 +152,12 @@ int selectedRow = bookedTestTable.getSelectedRow();
         System.out.println("Its entering over here");
         DefaultTableModel model = (DefaultTableModel) bookedTestTable.getModel();
         model.setRowCount(0);
+//        System.out.println("R is");
         System.out.println(system.getWorkQueue().getWorkRequestList());
         for (WorkRequest request : system.getWorkQueue().getWorkRequestList()) {
-           
+            
  
-        if (request.getReceiver().getUsername().equals(this.userAccount.getUsername())) {
+            if (request.getReceiver().getUsername().equals(this.userAccount.getUsername())) {
                 OrderInventoryWorkRequest bookrequest = (OrderInventoryWorkRequest) request;
                 Object[] row = new Object[4];
                 row[0] = request;

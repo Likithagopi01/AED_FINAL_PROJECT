@@ -37,7 +37,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
     
     
     public DoctorJPanel(JPanel userProcessContainer,EcoSystem system,UserAccount user) {
-        
+        initComponents();
         this.userProcessContainer=userProcessContainer;
         this.system=system;
         this.user = user;
@@ -48,7 +48,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
     
       
     public void viewTable(){
-        
+     
         DefaultTableModel dtm = (DefaultTableModel) doctorDetails.getModel();
         dtm.setRowCount(0);
         
