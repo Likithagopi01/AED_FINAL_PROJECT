@@ -31,7 +31,16 @@ public class UserAccountDirectory {
             }
         return null;
     }
-    
+    public UserAccount findUserAccount(String name){
+        
+         
+         for(UserAccount net : userAccountList){
+             if(net.getEmployee().getName().equals(name)){
+                 return net;
+             }
+         }
+         return null;
+     }
     public UserAccount createUserAccount(String username, String password, Employee employee, Role role){
         UserAccount userAccount = new UserAccount();
         userAccount.setUsername(username);
@@ -39,6 +48,7 @@ public class UserAccountDirectory {
         userAccount.setEmployee(employee);
         userAccount.setRole(role);
         userAccountList.add(userAccount);
+        System.out.println("Inside CUA "+ username);
         return userAccount;
     }
     

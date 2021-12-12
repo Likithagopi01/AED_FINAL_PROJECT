@@ -28,12 +28,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Ash
  */
-public class addMedicineJPanel extends javax.swing.JPanel {
+public class addMedicineJpanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form addMedicineJPanel
+     * Creates new form addMedicineJpanel
      */
-  private JPanel userProcessContainer;
+    private JPanel userProcessContainer;
     private UserAccount user;
     private EcoSystem system;
       private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
@@ -45,6 +45,8 @@ public class addMedicineJPanel extends javax.swing.JPanel {
     Patient pat;
     PharamacyAdmin pharm;
     String pharname;
+    
+    
     public addMedicineJpanel(JPanel userProcessContainer,EcoSystem system,String pharname,UserAccount user) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
@@ -55,7 +57,26 @@ public class addMedicineJPanel extends javax.swing.JPanel {
         viewTable();
         //this.pharm = pharm;
     }
+    
+    public void viewTable(){
+        DefaultTableModel dtm = (DefaultTableModel) addMedTbl.getModel();
+        dtm.setRowCount(0);
+        
+        
+        // Restaurant ro1 = system.getRestaurantDirectory().findRestaurant(resName);
+        PharamacyAdmin phar = system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(user.getEmployee().getName()).getOrganizationDirectory().getPharmacyAdminDirectory().findPharmacy(pharname);
+            System.out.println("Username"+system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(user.getEmployee().getName()).getOrganizationDirectory().getPharmacyAdminDirectory().findPharmacy(pharname));
+            if(phar.getPharDir()!=null){
+            for(PharmacyCatalog m : phar.getPharDir().getCatalog()  ) {
+               System.out.println(system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(user.getEmployee().getName()).getOrganizationDirectory().getPharmacyAdminDirectory().getPharmacyList().size());
+                Object row[] = new Object[3];
+                row[0] = m.getItemName();
+                row[1] = m.getItemPrice();
 
+                dtm.addRow(row);
+            }
+                    }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -78,6 +99,8 @@ public class addMedicineJPanel extends javax.swing.JPanel {
         enterpriseLabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         addMedTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -91,15 +114,21 @@ public class addMedicineJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(addMedTbl);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 408, 103));
+
         jLabel1.setText("Medicine Name:");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, -1, -1));
 
         jLabel2.setText("Medicine Price:");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, -1, -1));
 
         medNameTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 medNameTxtActionPerformed(evt);
             }
         });
+        add(medNameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 170, -1));
+        add(medPriceTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 170, -1));
 
         addMedBtn.setBackground(new java.awt.Color(24, 31, 46));
         addMedBtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -110,6 +139,7 @@ public class addMedicineJPanel extends javax.swing.JPanel {
                 addMedBtnActionPerformed(evt);
             }
         });
+        add(addMedBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(24, 31, 46));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -120,6 +150,7 @@ public class addMedicineJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, -1, -1));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -129,83 +160,12 @@ public class addMedicineJPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Add Medicine");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 626, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(40, 40, 40)
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(210, 210, 210)
-                            .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(410, 410, 410)
-                            .addComponent(medNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(470, 470, 470)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(210, 210, 210)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(270, 270, 270)
-                            .addComponent(jLabel1))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(410, 410, 410)
-                            .addComponent(medPriceTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(270, 270, 270)
-                            .addComponent(jLabel2))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(300, 300, 300)
-                            .addComponent(addMedBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(30, 30, 30)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(210, 210, 210)
-                            .addComponent(medNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(120, 120, 120)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(220, 220, 220)
-                            .addComponent(jLabel1))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(260, 260, 260)
-                            .addComponent(medPriceTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(260, 260, 260)
-                            .addComponent(jLabel2))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(310, 310, 310)
-                            .addComponent(addMedBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 260, 30));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 410, 380));
     }// </editor-fold>//GEN-END:initComponents
 
     private void medNameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medNameTxtActionPerformed
@@ -214,7 +174,7 @@ public class addMedicineJPanel extends javax.swing.JPanel {
 
     private void addMedBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMedBtnActionPerformed
         // TODO add your handling code here:
-        if (medNameTxt.getText().isEmpty() || medPriceTxt.getText().isEmpty()) {
+ if (medNameTxt.getText().isEmpty() || medPriceTxt.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Enter all mandatory fields");
         } else {
             if (!medNameTxt.getText().matches("[a-zA-Z_]+")) {
@@ -228,61 +188,63 @@ public class addMedicineJPanel extends javax.swing.JPanel {
                 return;
             }
 
-            //            else if (strongUsername() == false) {
-                //                dUname.setText("");
-                //                JOptionPane.showMessageDialog(null, "Username should be in the format of aa_aa@aa.aa");
-                //                return;
-                //            }
-            //            else if (strongPassword() == false) {
-                //                dPass.setText("");
-                //                JOptionPane.showMessageDialog(null, "Password should be at least 6 digits and contain at least one upper case letter, one lower case letter, one digit and one special character $, *, # or &.");
-                //                return;
-                //            }
+//            else if (strongUsername() == false) {
+//                dUname.setText("");
+//                JOptionPane.showMessageDialog(null, "Username should be in the format of aa_aa@aa.aa");
+//                return;
+//            } 
+//            else if (strongPassword() == false) {
+//                dPass.setText("");
+//                JOptionPane.showMessageDialog(null, "Password should be at least 6 digits and contain at least one upper case letter, one lower case letter, one digit and one special character $, *, # or &.");
+//                return;
+//            } 
             else {
             }
-            String menuIt = medNameTxt.getText();
-            Double ip = Double.valueOf(medPriceTxt.getText());
-            PharmacyCatalog m = new PharmacyCatalog();
-            //        System.out.println("Test "+user.getEmployee().getCity());
-            //        System.out.println(pharname);
-            //       System.out.println(system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(user.getEmployee().getName()));
-            //       //System.out.println();
-            //       System.out.println(system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(pharname).getOrganizationDirectory().getPharmacyAdminDirectory().getPharmacyList());
-            //       System.out.println("trying "+system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise("phar").getOrganizationDirectory().getPharmacyAdminDirectory().findPharmacy("phar"));
-            PharamacyAdmin pha = system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(user.getEmployee().getName()).getOrganizationDirectory().getPharmacyAdminDirectory().findPharmacy(pharname);
-
-            m.setItemName(menuIt);
-            m.setItemPrice(ip);
-            //                System.out.println("Directory +++++"+pha.getPharDir());
-
+        String menuIt = medNameTxt.getText();
+        Double ip = Double.valueOf(medPriceTxt.getText());
+        PharmacyCatalog m = new PharmacyCatalog();
+//        System.out.println("Test "+user.getEmployee().getCity());
+//        System.out.println(pharname);
+//       System.out.println(system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(user.getEmployee().getName()));     
+//       //System.out.println();
+//       System.out.println(system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(pharname).getOrganizationDirectory().getPharmacyAdminDirectory().getPharmacyList());
+//       System.out.println("trying "+system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise("phar").getOrganizationDirectory().getPharmacyAdminDirectory().findPharmacy("phar"));
+        PharamacyAdmin pha = system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(user.getEmployee().getName()).getOrganizationDirectory().getPharmacyAdminDirectory().findPharmacy(pharname);
+        
+        m.setItemName(menuIt);
+        m.setItemPrice(ip);
+//                System.out.println("Directory +++++"+pha.getPharDir());
+            
             if( pha.getPharDir()!= null){
-                //PharmacyDirectory d = new PharmacyCatalogDirectory();
-                PharmacyCatalogDirectory pd = pha.getPharDir();
-                ArrayList<PharmacyCatalog> am  = pha.getPharDir().getCatalog();
-                am.add(m);
-                pd.setCatalog(am);
-                pha.setPharDir(pd);
-                //            system.getPharmacyDirectory().setCatalog(am);
-                //            System.out.println(system);
-                //            system.setPharmacyDirectory(system.getPharmacyDirectory());
-                //            System.out.println(m.getItemName());
-            }
+            //PharmacyDirectory d = new PharmacyCatalogDirectory();
+            PharmacyCatalogDirectory pd = pha.getPharDir();
+            ArrayList<PharmacyCatalog> am  = pha.getPharDir().getCatalog();
+            am.add(m);
+            pd.setCatalog(am);
+            pha.setPharDir(pd);
+//            system.getPharmacyDirectory().setCatalog(am);
+//            System.out.println(system);
+//            system.setPharmacyDirectory(system.getPharmacyDirectory());
+//            System.out.println(m.getItemName());
+        }
             else{
-                PharmacyCatalogDirectory d = new PharmacyCatalogDirectory();
-                ArrayList<PharmacyCatalog> am  = new ArrayList<>();
-                am.add(m);
-                d.setCatalog(am);
-                pha.setPharDir(d);
-                //            System.out.println(system);
-                //            system.setPharmacyDirectory(d);
-                //            System.out.println(m.getItemName());
+            PharmacyCatalogDirectory d = new PharmacyCatalogDirectory();
+            ArrayList<PharmacyCatalog> am  = new ArrayList<>();
+            am.add(m);
+            d.setCatalog(am);
+            pha.setPharDir(d);
+//            System.out.println(system);
+//            system.setPharmacyDirectory(d);
+//            System.out.println(m.getItemName());
             }
             viewTable();
-        }
-        JOptionPane.showMessageDialog(null, "Medicine Added");
-        dB4OUtil.storeSystem(system);
-        medNameTxt.setText("");
-        medPriceTxt.setText("");
+            }
+            JOptionPane.showMessageDialog(null, "Medicine Added");
+             dB4OUtil.storeSystem(system);  
+             medNameTxt.setText("");
+             medPriceTxt.setText("");
+    
+ 
     }//GEN-LAST:event_addMedBtnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -295,14 +257,7 @@ public class addMedicineJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-        //
-        //        Component[] comps = this.userProcessContainer.getComponents();
-        //        for(Component comp : comps){
-            //            if(comp instanceof SystemAdminWorkAreaJPanel){
-                //                SystemAdminWorkAreaJPanel systemAdminWorkAreaJPanel= (SystemAdminWorkAreaJPanel) comp;
-                //                systemAdminWorkAreaJPanel.populateTree();
-                //            }
-            //        }
+        
     }//GEN-LAST:event_jButton6ActionPerformed
 
 

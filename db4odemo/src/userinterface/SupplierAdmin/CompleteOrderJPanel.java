@@ -23,18 +23,22 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Ash
  */
+
+
 public class CompleteOrderJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form CompleteOrderJPanel
+     * Creates new form GenerateTestReport
      */
- JPanel userProcessContainer;
+    JPanel userProcessContainer;
     UserAccount userAccount;
     EcoSystem system;
     OrderInventoryWorkRequest request;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     String selectedPharmacy;
-    public CompleteOrderJPanel(JPanel userProcessContainer,UserAccount userAccount,EcoSystem system, OrderInventoryWorkRequest request) {
+    
+    
+public CompleteOrderJPanel(JPanel userProcessContainer,UserAccount userAccount,EcoSystem system, OrderInventoryWorkRequest request) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount= userAccount;
@@ -44,8 +48,7 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
         DateBookedTxtField.setText(String.valueOf(request.getRequestDate()));
         populatetable();
         populateComboBox();
-        
-        
+           
     }
 
 
@@ -73,15 +76,21 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
         jButton6 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel2.setText("Items:");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 75, -1));
 
         patientNameTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 patientNameTxtFieldActionPerformed(evt);
             }
         });
+        add(patientNameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, 150, -1));
+        add(DateBookedTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 250, 150, -1));
 
         jLabel5.setText("Date Ordered");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 250, 90, -1));
 
         InventoryTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -96,6 +105,8 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(InventoryTable);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 410, 111));
+
         acceptOrder.setBackground(new java.awt.Color(24, 31, 46));
         acceptOrder.setForeground(new java.awt.Color(255, 255, 255));
         acceptOrder.setText("Accept");
@@ -105,6 +116,7 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
                 acceptOrderActionPerformed(evt);
             }
         });
+        add(acceptOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, -1, -1));
 
         declineOrder.setBackground(new java.awt.Color(24, 31, 46));
         declineOrder.setForeground(new java.awt.Color(255, 255, 255));
@@ -115,8 +127,10 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
                 declineOrderActionPerformed(evt);
             }
         });
+        add(declineOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, -1, -1));
 
         jLabel8.setText("Assign DeliveryMan:");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, -1, -1));
 
         delManCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select" }));
         delManCombo.addActionListener(new java.awt.event.ActionListener() {
@@ -124,6 +138,7 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
                 delManComboActionPerformed(evt);
             }
         });
+        add(delManCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 180, -1));
 
         jButton1.setBackground(new java.awt.Color(24, 31, 46));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -134,9 +149,11 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, -1, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Complete Order");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 260, 30));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -146,95 +163,8 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 676, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(60, 60, 60)
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(210, 210, 210)
-                            .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(310, 310, 310)
-                            .addComponent(acceptOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(24, 24, 24)
-                            .addComponent(patientNameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(250, 250, 250)
-                            .addComponent(jLabel8))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(390, 390, 390)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(390, 390, 390)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(520, 520, 520)
-                            .addComponent(declineOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(390, 390, 390)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(420, 420, 420)
-                            .addComponent(delManCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(490, 490, 490)
-                            .addComponent(DateBookedTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(260, 260, 260)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 443, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(30, 30, 30)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(210, 210, 210)
-                            .addComponent(acceptOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(120, 120, 120)
-                            .addComponent(patientNameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addComponent(jLabel8))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(340, 340, 340)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(170, 170, 170)
-                            .addComponent(jLabel5))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(210, 210, 210)
-                            .addComponent(declineOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(130, 130, 130)
-                            .addComponent(jLabel2))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addComponent(delManCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(170, 170, 170)
-                            .addComponent(DateBookedTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 80, 410, 380));
     }// </editor-fold>//GEN-END:initComponents
 
     private void patientNameTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientNameTxtFieldActionPerformed
@@ -244,7 +174,7 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
     private void acceptOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptOrderActionPerformed
         // TODO add your handling code here:
         int selectedRow = InventoryTable.getSelectedRow();
-        //        System.out.println("Status "+InventoryTable.getValueAt(selectedRow, 3));
+//        System.out.println("Status "+InventoryTable.getValueAt(selectedRow, 3));
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "You must select a row first!");
         } else {
@@ -257,8 +187,9 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
             }
 
         }
-        dB4OUtil.storeSystem(system);
-        //stsTxt.setText(placeWorkRequest.getStatus());
+        
+          dB4OUtil.storeSystem(system); 
+
     }//GEN-LAST:event_acceptOrderActionPerformed
 
     private void declineOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_declineOrderActionPerformed
@@ -277,8 +208,10 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
             request.setStatus("Declined");
             populatetable();
         }
-        dB4OUtil.storeSystem(system);
-        //stsTxt.setText(placeWorkRequest.getStatus());
+        
+         dB4OUtil.storeSystem(system); 
+         
+         
     }//GEN-LAST:event_declineOrderActionPerformed
 
     private void delManComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delManComboActionPerformed
@@ -296,9 +229,10 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
         int selectedValue = delManCombo.getSelectedIndex();
         if (selectedValue >= 0) {
             DeliveryMan deliveryMan = system.findNetwork(userAccount.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(selectedPharmacy).getOrganizationDirectory().getDeliveryManDirectory().findDeliveryMan(selectedPharmacy);
+           
             p.setDeliveryMan(system.getUserAccountDirectory().findUserAccount(deliveryMan.getDeliveryManName()));
             p.setStatus("Assigned");
-            request.setDeliveryMan(system.getUserAccountDirectory().findUserAccount(deliveryMan.getDeliveryManName()));
+                        request.setDeliveryMan(system.getUserAccountDirectory().findUserAccount(deliveryMan.getDeliveryManName()));
             request.setStatus("Assigned");
             System.out.println("assignment");
             System.out.println(request.getDeliveryMan().getUsername());
@@ -306,7 +240,7 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
 
         }
         populatetable();
-        dB4OUtil.storeSystem(system);
+        dB4OUtil.storeSystem(system); 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -314,14 +248,7 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-        //
-        //        Component[] comps = this.userProcessContainer.getComponents();
-        //        for(Component comp : comps){
-            //            if(comp instanceof SystemAdminWorkAreaJPanel){
-                //                SystemAdminWorkAreaJPanel systemAdminWorkAreaJPanel= (SystemAdminWorkAreaJPanel) comp;
-                //                systemAdminWorkAreaJPanel.populateTree();
-                //            }
-            //        }
+        
     }//GEN-LAST:event_jButton6ActionPerformed
 
 
@@ -341,8 +268,10 @@ public class CompleteOrderJPanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField patientNameTxtField;
     // End of variables declaration//GEN-END:variables
-
-private void populatetable(){
+   
+    
+    
+    private void populatetable(){
         DefaultTableModel dtm = (DefaultTableModel) InventoryTable.getModel();
         dtm.setRowCount(0);
 
@@ -353,9 +282,7 @@ private void populatetable(){
                 row[3] = request.getStatus();
 
                 dtm.addRow(row);
-                
-        
-        
+                        
     }
     
     
@@ -369,5 +296,6 @@ private void populatetable(){
              }
          }
     }
+    
 }
 
