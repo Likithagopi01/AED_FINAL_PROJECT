@@ -51,6 +51,7 @@ public class EmergencyHistoryJPanel extends javax.swing.JPanel {
         emergencyRequestJTable = new javax.swing.JTable();
         enterpriseLabel = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 410, 310));
@@ -68,7 +69,7 @@ public class EmergencyHistoryJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(emergencyRequestJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 430, 110));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 430, 110));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Emergency Dashboard");
@@ -82,7 +83,11 @@ public class EmergencyHistoryJPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/p2.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, 10, 680, 350));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -124,6 +129,7 @@ public class EmergencyHistoryJPanel extends javax.swing.JPanel {
     private javax.swing.JTable emergencyRequestJTable;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JButton jButton6;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables

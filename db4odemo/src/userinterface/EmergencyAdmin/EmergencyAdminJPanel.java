@@ -46,6 +46,7 @@ public class EmergencyAdminJPanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -75,6 +76,10 @@ public class EmergencyAdminJPanel extends javax.swing.JPanel {
         enterpriseLabel.setText("EMERGENCY ADMIN");
         add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 280, 30));
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 410, 400));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/p4.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-50, 0, 640, 350));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -99,6 +104,7 @@ public class EmergencyAdminJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
 }

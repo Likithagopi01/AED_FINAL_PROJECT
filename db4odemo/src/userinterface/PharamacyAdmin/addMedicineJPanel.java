@@ -98,6 +98,7 @@ public class addMedicineJpanel extends javax.swing.JPanel {
         jButton6 = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -150,7 +151,7 @@ public class addMedicineJpanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 120, 30));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -160,12 +161,16 @@ public class addMedicineJpanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 450, 90, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Add Medicine");
         add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 260, 30));
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 410, 380));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/WhatsApp Image 2021-12-12 at 3.10.31 PM.jpeg"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 870, 550));
     }// </editor-fold>//GEN-END:initComponents
 
     private void medNameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medNameTxtActionPerformed
@@ -269,6 +274,7 @@ public class addMedicineJpanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField medNameTxt;
