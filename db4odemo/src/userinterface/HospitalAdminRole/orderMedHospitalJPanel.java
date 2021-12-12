@@ -148,6 +148,7 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
         jButton6 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         orderBtn1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -235,7 +236,9 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
             }
         });
         add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 60, 410, 400));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/P11.gif"))); // NOI18N
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 540));
 
         orderBtn1.setBackground(new java.awt.Color(24, 31, 46));
         orderBtn1.setForeground(new java.awt.Color(255, 255, 255));
@@ -247,6 +250,9 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
             }
         });
         add(orderBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, -1, -1));
+
+        jLabel1.setText("jLabel1");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 410, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void trackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trackBtnActionPerformed
@@ -326,6 +332,7 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
     private javax.swing.JButton addcartBtn;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JButton jButton6;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
