@@ -32,7 +32,8 @@ public class PharamacyAdminJPanel extends javax.swing.JPanel {
     WorkRequest wq;
     Employee emp;
     PharamacyAdmin phar;
-    public PharamacyAdminJPanel(JPanel userProcessContainer, UserAccount ua,EcoSystem system) {
+    
+public PharamacyAdminJPanel(JPanel userProcessContainer, UserAccount ua,EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         //this.userProcessContainer = userProcessContainer;
@@ -61,6 +62,8 @@ public class PharamacyAdminJPanel extends javax.swing.JPanel {
         enterpriseLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         manageEmployeeJButton.setBackground(new java.awt.Color(24, 31, 46));
         manageEmployeeJButton.setForeground(new java.awt.Color(255, 255, 255));
         manageEmployeeJButton.setText("Add new medications");
@@ -70,6 +73,7 @@ public class PharamacyAdminJPanel extends javax.swing.JPanel {
                 manageEmployeeJButtonActionPerformed(evt);
             }
         });
+        add(manageEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 180, -1));
 
         manageOrganizationJButton.setBackground(new java.awt.Color(24, 31, 46));
         manageOrganizationJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -80,64 +84,30 @@ public class PharamacyAdminJPanel extends javax.swing.JPanel {
                 manageOrganizationJButtonActionPerformed(evt);
             }
         });
+        add(manageOrganizationJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, -1, -1));
 
         enterpriseLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel1.setText("Pharmacy Admin");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 590, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(350, 350, 350)
-                            .addComponent(manageEmployeeJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(350, 350, 350)
-                            .addComponent(manageOrganizationJButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(330, 330, 330)
-                            .addComponent(enterpriseLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(170, 170, 170)
-                            .addComponent(manageEmployeeJButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(120, 120, 120)
-                            .addComponent(manageOrganizationJButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(enterpriseLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(enterpriseLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 260, 30));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 410, 380));
     }// </editor-fold>//GEN-END:initComponents
 
     private void manageEmployeeJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageEmployeeJButtonActionPerformed
+        
         addMedicineJpanel addMed = new addMedicineJpanel(userProcessContainer, system,pharName,user);
         userProcessContainer.add("CreateHospital", addMed);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
+        
     }//GEN-LAST:event_manageEmployeeJButtonActionPerformed
 
     private void manageOrganizationJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrganizationJButtonActionPerformed
+        
         manageOrderJpanel orderMan = new manageOrderJpanel(userProcessContainer, system, user,pharName, patName);
         userProcessContainer.add("CreateHospital", orderMan);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
+        
     }//GEN-LAST:event_manageOrganizationJButtonActionPerformed
 
 

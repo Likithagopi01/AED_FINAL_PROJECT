@@ -30,7 +30,9 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
     EcoSystem system;
     UserAccount userAccount;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-    public ManageOrdersJPanel(JPanel userProcessContainer,UserAccount userAccount, EcoSystem system) {
+    
+    
+public ManageOrdersJPanel(JPanel userProcessContainer,UserAccount userAccount, EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount= userAccount;
@@ -54,6 +56,8 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         jButton6 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         bookedTestTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -67,6 +71,8 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(bookedTestTable);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 499, 136));
+
         jButton2.setBackground(new java.awt.Color(24, 31, 46));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("COMPLETE ORDER");
@@ -76,9 +82,11 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, -1, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Manage Orders");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 260, 30));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -88,66 +96,19 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 639, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(210, 210, 210)
-                            .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(20, 20, 20)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(460, 460, 460)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(120, 120, 120)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(70, 70, 70)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(90, 90, 90)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(150, 150, 150)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 410, 380));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
 
-        int selectedRow = bookedTestTable.getSelectedRow();
+int selectedRow = bookedTestTable.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row.");
 
         } else {
             WorkRequest request = (WorkRequest) bookedTestTable.getValueAt(selectedRow, 0);
-            //            System.out.println(workRequestJTable.getValueAt(selectedRow, 1));
-            //            System.out.println(workRequestJTable.getValueAt(selectedRow, 0));
-            //            System.out.println((request instanceof PlaceNewOrderWorkRequest));
             if (request instanceof OrderInventoryWorkRequest) {
                 OrderInventoryWorkRequest placeWorkRequest = (OrderInventoryWorkRequest) bookedTestTable.getValueAt(selectedRow, 0);
                 System.out.println(placeWorkRequest.getClass());
@@ -163,7 +124,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
             }
 
         }
-        dB4OUtil.storeSystem(system);
+          dB4OUtil.storeSystem(system); 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -171,14 +132,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-        //
-        //        Component[] comps = this.userProcessContainer.getComponents();
-        //        for(Component comp : comps){
-            //            if(comp instanceof SystemAdminWorkAreaJPanel){
-                //                SystemAdminWorkAreaJPanel systemAdminWorkAreaJPanel= (SystemAdminWorkAreaJPanel) comp;
-                //                systemAdminWorkAreaJPanel.populateTree();
-                //            }
-            //        }
+        
     }//GEN-LAST:event_jButton6ActionPerformed
 
 
@@ -191,20 +145,15 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 
- private void populateTable() {
+    private void populateTable() {
         System.out.println("Its entering over here");
         DefaultTableModel model = (DefaultTableModel) bookedTestTable.getModel();
         model.setRowCount(0);
-//        System.out.println("R is");
         System.out.println(system.getWorkQueue().getWorkRequestList());
         for (WorkRequest request : system.getWorkQueue().getWorkRequestList()) {
-            
-//            System.out.println("REC "+request.getReceiver().getUsername());
-//            System.out.println("class: " +request.getSender().getUsername());
-//            System.out.println("class: " +request.getSender().getPassword());
-//            System.out.println("HELLO "+this.userAccount);
+           
  
-            if (request.getReceiver().getUsername().equals(this.userAccount.getUsername())) {
+        if (request.getReceiver().getUsername().equals(this.userAccount.getUsername())) {
                 OrderInventoryWorkRequest bookrequest = (OrderInventoryWorkRequest) request;
                 Object[] row = new Object[4];
                 row[0] = request;

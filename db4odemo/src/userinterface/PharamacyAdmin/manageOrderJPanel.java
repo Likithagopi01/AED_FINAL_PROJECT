@@ -28,12 +28,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Ash
  */
-public class manageOrderJPanel extends javax.swing.JPanel {
+public class manageOrderJpanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form manageOrderJPanel
+     * Creates new form manageOrderJpanel
      */
-   private JPanel userProcessContainer;
+    private JPanel userProcessContainer;
     private UserAccount user;
     private EcoSystem system;
      private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
@@ -58,15 +58,15 @@ public class manageOrderJPanel extends javax.swing.JPanel {
         this.patname = patient;
         this.user = user;
         initComponents();
-        //System.out.println("check "+systeuser.getEmployee().getCity()));
-       //populateFields();
-       populatetable();
+        
+        populatetable();
         populateComboBox();
         System.out.println("Work request"+system.getWorkQueue().getWorkRequestList());
         
     }
-
- public void populateComboBox(){
+   
+    
+    public void populateComboBox(){
          for(Enterprise res: system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().getEnterpriseList()){
              if(res.getEnterpriseType().getValue().equals("Delivery")){
             delManCombo.addItem(res.getName());
@@ -94,7 +94,6 @@ public class manageOrderJPanel extends javax.swing.JPanel {
         }
         }
     }
-   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -195,24 +194,24 @@ public class manageOrderJPanel extends javax.swing.JPanel {
                             .addGap(210, 210, 210)
                             .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(260, 260, 260)
-                            .addComponent(acceptOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
                             .addGap(390, 390, 390)
                             .addComponent(delManCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(480, 480, 480)
-                            .addComponent(declineOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(220, 220, 220)
-                            .addComponent(jLabel6))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(340, 340, 340)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
+                            .addGap(480, 480, 480)
+                            .addComponent(declineOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
                             .addGap(220, 220, 220)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(220, 220, 220)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(260, 260, 260)
+                            .addComponent(acceptOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -227,33 +226,34 @@ public class manageOrderJPanel extends javax.swing.JPanel {
                     .addGap(30, 30, 30)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(190, 190, 190)
-                            .addComponent(acceptOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
                             .addGap(280, 280, 280)
                             .addComponent(delManCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(190, 190, 190)
-                            .addComponent(declineOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(280, 280, 280)
-                            .addComponent(jLabel6))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(330, 330, 330)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
+                            .addGap(190, 190, 190)
+                            .addComponent(declineOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
                             .addGap(30, 30, 30)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(280, 280, 280)
+                            .addComponent(jLabel6))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(190, 190, 190)
+                            .addComponent(acceptOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void acceptOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptOrderActionPerformed
         // TODO add your handling code here:
-        int selectedRow = orderTbl.getSelectedRow();
-        // System.out.println("Status "+orderTbl.getValueAt(selectedRow, 3));
-        if (selectedRow <0) {
+        
+       int selectedRow = orderTbl.getSelectedRow();
+               // System.out.println("Status "+orderTbl.getValueAt(selectedRow, 3)); 
+       if (selectedRow <0) {
             JOptionPane.showMessageDialog(null, "You must select a row first!");
         } else {
             if (orderTbl.getValueAt(selectedRow, 3).equals("Completed")) {
@@ -265,12 +265,13 @@ public class manageOrderJPanel extends javax.swing.JPanel {
             }
 
         }
-        dB4OUtil.storeSystem(system);
-        //stsTxt.setText(placeWorkRequest.getStatus());
+   dB4OUtil.storeSystem(system); 
+   
     }//GEN-LAST:event_acceptOrderActionPerformed
 
     private void declineOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_declineOrderActionPerformed
         // TODO add your handling code here:
+        
         int selectedRow = orderTbl.getSelectedRow();
 
         if (selectedRow < 0) {
@@ -281,12 +282,12 @@ public class manageOrderJPanel extends javax.swing.JPanel {
         if (orderTbl.getValueAt(selectedRow, 1).equals("Completed")) {
             JOptionPane.showMessageDialog(null, "Order is already processed and completed!");
         } else {
-
-            request.setStatus("Declined");
-            populatetable();
+               
+                request.setStatus("Declined");
+                populatetable();
         }
 
-        dB4OUtil.storeSystem(system);
+           dB4OUtil.storeSystem(system);  
         //stsTxt.setText(placeWorkRequest.getStatus());
     }//GEN-LAST:event_declineOrderActionPerformed
 
@@ -298,37 +299,29 @@ public class manageOrderJPanel extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        //        System.out.println("Selected del++"+selectedPharmacy+"++");
-        //        System.out.println("Testing "+system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(selectedPharmacy).getOrganizationDirectory().getDeliveryManDirectory().getDeliveryList().get(0).getDeliveryManName());
-        //         System.out.println("Testing111 "+system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(selectedPharmacy).getOrganizationDirectory().getDeliveryManDirectory().getDeliveryList().size());
+        
         int selectedValue = delManCombo.getSelectedIndex();
         if (selectedValue >= 0) {
             DeliveryMan deliveryMan = system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(selectedPharmacy).getOrganizationDirectory().getDeliveryManDirectory().findDeliveryMan(selectedPharmacy);
-            placeWorkRequest.setDeliveryMan(system.getUserAccountDirectory().findUserAccount(deliveryMan.getDeliveryManName()));
-            System.out.println(placeWorkRequest.getDeliveryMan());
-            placeWorkRequest.setStatus("Assigned");
-            System.out.println("assignment");
+           placeWorkRequest.setDeliveryMan(system.getUserAccountDirectory().findUserAccount(deliveryMan.getDeliveryManName()));
+           System.out.println(placeWorkRequest.getDeliveryMan());
+           placeWorkRequest.setStatus("Assigned");
+           System.out.println("assignment");
             System.out.println(placeWorkRequest.getDeliveryMan().getUsername());
             JOptionPane.showMessageDialog(null, "Delivery man has been assigned");
-
+            
         }
         populatetable();
-        dB4OUtil.storeSystem(system);
+   dB4OUtil.storeSystem(system);  
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-        //
-        //        Component[] comps = this.userProcessContainer.getComponents();
-        //        for(Component comp : comps){
-            //            if(comp instanceof SystemAdminWorkAreaJPanel){
-                //                SystemAdminWorkAreaJPanel systemAdminWorkAreaJPanel= (SystemAdminWorkAreaJPanel) comp;
-                //                systemAdminWorkAreaJPanel.populateTree();
-                //            }
-            //        }
+        
     }//GEN-LAST:event_jButton6ActionPerformed
 
 

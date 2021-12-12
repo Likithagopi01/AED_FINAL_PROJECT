@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package userinterface.HospitalAdminRole;
 
@@ -29,7 +30,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Likitha G
  */
-public class orderMedHospitalJPanel extends javax.swing.JPanel {
+public class orderMedHospitalJpanel extends javax.swing.JPanel {
 
     /**
      * Creates new form orderMedHospitalJPanel
@@ -83,7 +84,9 @@ public class orderMedHospitalJPanel extends javax.swing.JPanel {
              }
          }
     }
-            public void getMenuItems(String pharName){
+    
+    
+    public void getMenuItems(String pharName){
         dtm = (DefaultTableModel) medTable.getModel();
         dtm.setRowCount(0);
 

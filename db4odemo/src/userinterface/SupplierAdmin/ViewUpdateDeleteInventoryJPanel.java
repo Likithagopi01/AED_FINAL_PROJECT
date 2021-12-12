@@ -5,7 +5,6 @@
  */
 package userinterface.SupplierAdmin;
 
-
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.SupplierAdmin.Inventory;
@@ -16,20 +15,25 @@ import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+
+
 /**
  *
  * @author Ash
  */
+
 public class ViewUpdateDeleteInventoryJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form ViewUpdateDeleteInventoryJPanel
      */
-    JPanel userProcessContainer;
+        JPanel userProcessContainer;
     EcoSystem system;
     UserAccount userAccount;
-    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-    public ViewUpdateDeleteInventoryJPanel(JPanel userProcessContainer,UserAccount userAccount, EcoSystem system) {
+     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+     
+     
+public ViewUpdateDeleteInventoryJPanel(JPanel userProcessContainer,UserAccount userAccount, EcoSystem system) {
         initComponents();
                 this.userProcessContainer = userProcessContainer;
         this.userAccount= userAccount;
@@ -62,11 +66,14 @@ public class ViewUpdateDeleteInventoryJPanel extends javax.swing.JPanel {
         jButton6 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         unitsTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 unitsTxtFieldActionPerformed(evt);
             }
         });
+        add(unitsTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 440, 150, -1));
 
         jButton2.setBackground(new java.awt.Color(24, 31, 46));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -77,6 +84,7 @@ public class ViewUpdateDeleteInventoryJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 490, -1, -1));
 
         jButton3.setBackground(new java.awt.Color(24, 31, 46));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -87,32 +95,40 @@ public class ViewUpdateDeleteInventoryJPanel extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 260, -1, -1));
 
         jLabel2.setText("Inventory Name");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, -1, -1));
 
         jLabel3.setText("Manufacturer:");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 370, 117, -1));
 
         jLabel4.setText("Price per unit");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 410, -1, -1));
 
         jLabel5.setText("Units available");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 450, -1, -1));
 
         nameTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameTxtFieldActionPerformed(evt);
             }
         });
+        add(nameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 330, 150, -1));
 
         yrsTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 yrsTxtFieldActionPerformed(evt);
             }
         });
+        add(yrsTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 370, 150, -1));
 
         monthlTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 monthlTxtFieldActionPerformed(evt);
             }
         });
+        add(monthlTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 400, 150, -1));
 
         plansJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -132,8 +148,11 @@ public class ViewUpdateDeleteInventoryJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(plansJTable);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 526, 150));
+
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Manage Inventory");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 260, 30));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -143,100 +162,8 @@ public class ViewUpdateDeleteInventoryJPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 706, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(60, 60, 60)
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(210, 210, 210)
-                            .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(90, 90, 90)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(50, 50, 50)
-                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(monthlTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(unitsTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(500, 500, 500)
-                            .addComponent(nameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(340, 340, 340)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(340, 340, 340)
-                            .addComponent(jLabel2))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(340, 340, 340)
-                            .addComponent(jLabel4))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(500, 500, 500)
-                            .addComponent(yrsTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(340, 340, 340)
-                            .addComponent(jLabel5))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(180, 180, 180)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(380, 380, 380)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 513, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(30, 30, 30)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(180, 180, 180)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(97, 97, 97)
-                            .addComponent(monthlTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(20, 20, 20)
-                            .addComponent(unitsTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(250, 250, 250)
-                            .addComponent(nameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addComponent(jLabel3))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(250, 250, 250)
-                            .addComponent(jLabel2))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(330, 330, 330)
-                            .addComponent(jLabel4))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addComponent(yrsTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(370, 370, 370)
-                            .addComponent(jLabel5))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(20, 20, 20)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(26, 26, 26)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 80, 410, 380));
     }// </editor-fold>//GEN-END:initComponents
 
     private void unitsTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unitsTxtFieldActionPerformed
@@ -245,12 +172,14 @@ public class ViewUpdateDeleteInventoryJPanel extends javax.swing.JPanel {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        
+        
         int selectedRow = plansJTable.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row");
             return;
         } else {
-            if (!nameTxtField.getText().matches("[a-zA-Z_]+")) {
+                                     if (!nameTxtField.getText().matches("[a-zA-Z_]+")) {
                 JOptionPane.showMessageDialog(this, "Enter proper inventory item name");
                 nameTxtField.setText("");
                 return;
@@ -266,7 +195,7 @@ public class ViewUpdateDeleteInventoryJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Enter availability in Integers");
                 unitsTxtField.setText("");
                 return;
-            }
+            } 
             else{}
             //            updateJPanel.setVisible(true);
 
@@ -283,11 +212,14 @@ public class ViewUpdateDeleteInventoryJPanel extends javax.swing.JPanel {
             unitsTxtField.setText("");
 
         }
-        dB4OUtil.storeSystem(system);
+          dB4OUtil.storeSystem(system); 
+          
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        
+        
         int selectedRow = plansJTable.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row.");
@@ -305,7 +237,8 @@ public class ViewUpdateDeleteInventoryJPanel extends javax.swing.JPanel {
             unitsTxtField.setText("");
 
         }
-        dB4OUtil.storeSystem(system);
+          dB4OUtil.storeSystem(system);
+          
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void nameTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTxtFieldActionPerformed
@@ -333,21 +266,16 @@ public class ViewUpdateDeleteInventoryJPanel extends javax.swing.JPanel {
         yrsTxtField.setText(String.valueOf(manufacturer));
         monthlTxtField.setText(String.valueOf(price));
         unitsTxtField.setText(String.valueOf(avail));
+        
     }//GEN-LAST:event_plansJTableMouseClicked
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-        //
-        //        Component[] comps = this.userProcessContainer.getComponents();
-        //        for(Component comp : comps){
-            //            if(comp instanceof SystemAdminWorkAreaJPanel){
-                //                SystemAdminWorkAreaJPanel systemAdminWorkAreaJPanel= (SystemAdminWorkAreaJPanel) comp;
-                //                systemAdminWorkAreaJPanel.populateTree();
-                //            }
-            //        }
+        
     }//GEN-LAST:event_jButton6ActionPerformed
 
 
@@ -369,7 +297,7 @@ public class ViewUpdateDeleteInventoryJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField yrsTxtField;
     // End of variables declaration//GEN-END:variables
 
-private void populateTable() {
+    private void populateTable() {
         
                 DefaultTableModel model = (DefaultTableModel) plansJTable.getModel();
         model.setRowCount(0);
@@ -387,4 +315,5 @@ private void populateTable() {
                }
         
     }
+    
 }
