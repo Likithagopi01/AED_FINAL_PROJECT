@@ -148,14 +148,14 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 120, Short.MAX_VALUE))
+                .addGap(0, 193, Short.MAX_VALUE))
         );
 
         jSplitPane.setLeftComponent(jPanel1);
@@ -164,7 +164,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.setPreferredSize(new java.awt.Dimension(1825, 1000));
         jPanel2.setLayout(null);
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(450, 230, 420, 330);
+        jLabel3.setBounds(250, 280, 420, 330);
 
         jLabel1.setText("Selected Node:");
         jPanel2.add(jLabel1);
@@ -183,7 +183,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(btnManageNetwork);
-        btnManageNetwork.setBounds(310, 120, 156, 43);
+        btnManageNetwork.setBounds(100, 160, 156, 43);
 
         btnManageAdmin.setBackground(new java.awt.Color(24, 31, 46));
         btnManageAdmin.setForeground(new java.awt.Color(255, 255, 255));
@@ -194,7 +194,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(btnManageAdmin);
-        btnManageAdmin.setBounds(310, 250, 156, 43);
+        btnManageAdmin.setBounds(100, 290, 156, 43);
 
         jButton1.setBackground(new java.awt.Color(24, 31, 46));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -205,7 +205,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(jButton1);
-        jButton1.setBounds(310, 190, 156, 43);
+        jButton1.setBounds(100, 230, 156, 43);
 
         jButton2.setBackground(new java.awt.Color(24, 31, 46));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -216,7 +216,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(jButton2);
-        jButton2.setBounds(310, 310, 156, 43);
+        jButton2.setBounds(100, 350, 156, 43);
 
         btnManageNetwork1.setBackground(new java.awt.Color(24, 31, 46));
         btnManageNetwork1.setForeground(new java.awt.Color(255, 255, 255));
@@ -227,7 +227,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(btnManageNetwork1);
-        btnManageNetwork1.setBounds(560, 120, 156, 43);
+        btnManageNetwork1.setBounds(350, 160, 156, 43);
 
         jButton3.setBackground(new java.awt.Color(24, 31, 46));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -238,7 +238,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(jButton3);
-        jButton3.setBounds(820, 120, 156, 43);
+        jButton3.setBounds(610, 160, 156, 43);
 
         jButton4.setBackground(new java.awt.Color(24, 31, 46));
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
@@ -249,7 +249,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(jButton4);
-        jButton4.setBounds(560, 190, 156, 43);
+        jButton4.setBounds(350, 230, 156, 43);
 
         jButton5.setBackground(new java.awt.Color(24, 31, 46));
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
@@ -260,7 +260,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(jButton5);
-        jButton5.setBounds(820, 190, 156, 43);
+        jButton5.setBounds(610, 230, 156, 43);
 
         jButton6.setBackground(new java.awt.Color(24, 31, 46));
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
@@ -271,7 +271,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(jButton6);
-        jButton6.setBounds(820, 250, 156, 43);
+        jButton6.setBounds(610, 290, 156, 43);
 
         jButton7.setBackground(new java.awt.Color(24, 31, 46));
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
@@ -282,7 +282,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(jButton7);
-        jButton7.setBounds(560, 310, 156, 43);
+        jButton7.setBounds(350, 350, 156, 43);
 
         jButton8.setBackground(new java.awt.Color(24, 31, 46));
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
@@ -293,7 +293,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(jButton8);
-        jButton8.setBounds(820, 310, 156, 43);
+        jButton8.setBounds(610, 350, 156, 43);
 
         manPhar.setBackground(new java.awt.Color(24, 31, 46));
         manPhar.setForeground(new java.awt.Color(255, 255, 255));
@@ -304,12 +304,12 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(manPhar);
-        manPhar.setBounds(560, 250, 121, 43);
+        manPhar.setBounds(350, 290, 160, 43);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
-        jLabel2.setText("Admin Dashboard");
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel2.setText("ADMIN DASHBOARD");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(490, 30, 320, 40);
+        jLabel2.setBounds(280, 70, 380, 40);
         jPanel2.add(jLabel7);
         jLabel7.setBounds(-20, 140, 0, 0);
 
@@ -323,7 +323,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(jButton9);
-        jButton9.setBounds(310, 370, 156, 43);
+        jButton9.setBounds(100, 410, 156, 43);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -340,7 +340,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(jButton10);
-        jButton10.setBounds(820, 370, 156, 43);
+        jButton10.setBounds(610, 410, 156, 43);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

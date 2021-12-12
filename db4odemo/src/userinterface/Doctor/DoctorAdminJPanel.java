@@ -74,11 +74,11 @@ public class DoctorAdminJPanel extends javax.swing.JPanel {
 //                System.out.println("comm" + ((BookAppointment) wq).getComments());
            Object row[] = new Object[5];
             row[0] = wq.getSender().getEmployee().getName();
-//            System.out.println("meds are" +((BookAppointment) wq).getMeds().getMedicines());
+            System.out.println("meds are" +((BookAppointment) wq).getMeds().getMedicines());
             
                 for(int i=1;i<=(((BookAppointment) wq).getMeds().getMedicines()).size();i++){
                     for(String m:((BookAppointment) wq).getMeds().getMedicines()){
-//                    System.out.println(((BookAppointment) wq).getMeds().getMedicines());
+                    System.out.println(((BookAppointment) wq).getMeds().getMedicines().size());
                     row[i] = m;
                     i++;
             }
@@ -110,6 +110,7 @@ public class DoctorAdminJPanel extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -158,7 +159,7 @@ public class DoctorAdminJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 693, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
@@ -192,6 +193,10 @@ public class DoctorAdminJPanel extends javax.swing.JPanel {
         enterpriseLabel.setText("Doctor Dashboard");
         add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, 180, 30));
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 60, 410, 400));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/WhatsApp Image 2021-12-12 at 14.12.20 (1).jpeg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 420));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -228,6 +233,7 @@ public class DoctorAdminJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

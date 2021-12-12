@@ -19,6 +19,7 @@ import Business.WorkQueue.PharmacyOrder;
 import Business.WorkQueue.PlaceNewOrderWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
+//import com.sun.org.apache.xml.internal.resolver.Catalog;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -30,19 +31,17 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Likitha G
  */
-public class orderMedHospitalJpanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form orderMedHospitalJPanel
-     */
-     private JPanel userProcessContainer;
-     private UserAccount user;
-     private EcoSystem system;
-     private String hospitalName;
+public class orderMedHospitalJpanel extends javax.swing.JPanel {
+    private JPanel userProcessContainer;
+
+    private UserAccount user;
+    private EcoSystem system;
+    private String hospitalName;
      private String docname;
      private String timings;
      private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-     private Hospital hosObj;
+    private Hospital hosObj;
     Patient pat;
     PharmacyCatalog catalog;
     ArrayList<PharmacyCatalog> ml;
@@ -71,9 +70,12 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
         System.out.println("Sender "+user);
 //            System.out.println(pat.getMedicine().getMedicines().get(0));
 //            txt1.setText(pat.getMedicine().getMedicines().get(0));
-
-    }
-    
+//            txt2.setText(pat.getMedicine().getMedicines().get(1));
+//            txt3.setText(pat.getMedicine().getMedicines().get(2));
+//            txt4.setText(pat.getComments());
+            
+    }      
+            
     public void populateComboBox(){
          for(Enterprise res: system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().getEnterpriseList()){
              if(res.getEnterpriseType().getValue().equals("Pharmacy")){
@@ -84,9 +86,7 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
              }
          }
     }
-    
-    
-    public void getMenuItems(String pharName){
+            public void getMenuItems(String pharName){
         dtm = (DefaultTableModel) medTable.getModel();
         dtm.setRowCount(0);
 
@@ -149,6 +149,8 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         orderBtn1 = new javax.swing.JButton();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         trackBtn.setBackground(new java.awt.Color(24, 31, 46));
         trackBtn.setForeground(new java.awt.Color(255, 255, 255));
         trackBtn.setText("Track");
@@ -158,6 +160,7 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
                 trackBtnActionPerformed(evt);
             }
         });
+        add(trackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 460, -1, -1));
 
         pharmacyCom.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Pharmacy" }));
         pharmacyCom.addActionListener(new java.awt.event.ActionListener() {
@@ -165,8 +168,10 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
                 pharmacyComActionPerformed(evt);
             }
         });
+        add(pharmacyCom, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, 170, -1));
 
         jLabel5.setText("Select Pharmacy:");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, -1, -1));
 
         medTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -189,6 +194,8 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(medTable);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 410, 101));
+
         addcartBtn.setBackground(new java.awt.Color(24, 31, 46));
         addcartBtn.setForeground(new java.awt.Color(255, 255, 255));
         addcartBtn.setText("Add");
@@ -198,6 +205,7 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
                 addcartBtnActionPerformed(evt);
             }
         });
+        add(addcartBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, -1, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -212,8 +220,11 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
         ));
         jScrollPane3.setViewportView(jTable1);
 
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 392, 115));
+
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Hospital Pharmacy Order ");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 260, 30));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -223,6 +234,8 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 60, 410, 400));
 
         orderBtn1.setBackground(new java.awt.Color(24, 31, 46));
         orderBtn1.setForeground(new java.awt.Color(255, 255, 255));
@@ -233,78 +246,7 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
                 orderBtn1ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 706, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(60, 60, 60)
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(210, 210, 210)
-                            .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(290, 290, 290)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(pharmacyCom, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addComponent(addcartBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(300, 300, 300)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(550, 550, 550)
-                            .addComponent(orderBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(520, 520, 520)
-                            .addComponent(trackBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 483, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(10, 10, 10)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(30, 30, 30)
-                            .addComponent(jLabel5))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(30, 30, 30)
-                            .addComponent(pharmacyCom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(180, 180, 180)
-                            .addComponent(addcartBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(270, 270, 270)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(180, 180, 180)
-                            .addComponent(orderBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(70, 70, 70)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(trackBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(orderBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void trackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trackBtnActionPerformed
@@ -349,10 +291,10 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
 
     private void orderBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderBtn1ActionPerformed
         // TODO add your handling code here:
-        Boolean flag = true;
-        System.out.println(selectedPharmacy);
+                 Boolean flag = true;
+         System.out.println(selectedPharmacy);
         System.out.println("Receiver "+system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(selectedPharmacy));
-
+        
         if (orderItemList.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Error: There are no tests chosen!");
             flag = false;
@@ -371,11 +313,11 @@ public class orderMedHospitalJpanel extends javax.swing.JPanel {
             System.out.println("Receiver000"+newWorkRequest.getReceiver());
             System.out.println(newWorkRequest.getRequestDate());
             System.out.println(newWorkRequest.getStatus());
-
+            
             addcartBtn.setVisible(false);
         }
         populatetable();
-        dB4OUtil.storeSystem(system);
+          dB4OUtil.storeSystem(system);
 
     }//GEN-LAST:event_orderBtn1ActionPerformed
 

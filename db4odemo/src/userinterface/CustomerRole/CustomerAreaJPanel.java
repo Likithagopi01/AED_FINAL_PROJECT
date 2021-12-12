@@ -129,27 +129,34 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jLabel5 = new javax.swing.JLabel();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Patient Dashboard");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 180, 30));
 
         restList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 restListActionPerformed(evt);
             }
         });
+        add(restList, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 60, 293, -1));
 
         restList1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 restList1ActionPerformed(evt);
             }
         });
+        add(restList1, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 110, 293, -1));
 
         restList2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 restList2ActionPerformed(evt);
             }
         });
+        add(restList2, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 210, 293, -1));
 
         jButton1.setBackground(new java.awt.Color(24, 31, 46));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -160,10 +167,13 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 350, -1, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 250, 290, -1));
 
         jButton2.setBackground(new java.awt.Color(24, 31, 46));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -174,6 +184,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 180, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -193,6 +204,8 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
 
         jPanel1.add(jScrollPane2);
 
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 570, 190));
+
         InsuranceJButton.setBackground(new java.awt.Color(24, 31, 46));
         InsuranceJButton.setForeground(new java.awt.Color(255, 255, 255));
         InsuranceJButton.setText("Insurance");
@@ -202,6 +215,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 InsuranceJButtonActionPerformed(evt);
             }
         });
+        add(InsuranceJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 60, -1, -1));
 
         OrderBtn.setBackground(new java.awt.Color(24, 31, 46));
         OrderBtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -212,6 +226,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 OrderBtnActionPerformed(evt);
             }
         });
+        add(OrderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 220, -1, -1));
 
         jButton4.setBackground(new java.awt.Color(24, 31, 46));
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
@@ -222,6 +237,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 jButton4ActionPerformed(evt);
             }
         });
+        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 100, -1, -1));
 
         jButton5.setBackground(new java.awt.Color(24, 31, 46));
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
@@ -232,115 +248,25 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 jButton5ActionPerformed(evt);
             }
         });
+        add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 140, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 410, 310));
 
         jLabel1.setText("Select Time");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, -1, -1));
 
         jLabel2.setText("Select Hospital");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
 
         jLabel3.setText("Select Doctor");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, -1, -1));
 
         jLabel4.setText("DATE");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, -1, -1));
+        add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 159, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(125, 125, 125)
-                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(787, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(220, 220, 220)
-                            .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel1))
-                            .addGap(50, 50, 50)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(restList, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(restList1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(restList2, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(10, 10, 10)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGap(70, 70, 70)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(OrderBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(InsuranceJButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(60, 60, 60)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(70, 70, 70)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(294, 294, 294)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(159, 159, 159)
-                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(471, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(30, 30, 30)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel2)
-                            .addGap(26, 26, 26)
-                            .addComponent(jLabel3)
-                            .addGap(36, 36, 36)
-                            .addComponent(jLabel4)
-                            .addGap(36, 36, 36)
-                            .addComponent(jLabel1))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(restList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(28, 28, 28)
-                            .addComponent(restList1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(78, 78, 78)
-                            .addComponent(restList2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(160, 160, 160)
-                            .addComponent(OrderBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(120, 120, 120)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(InsuranceJButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(80, 80, 80)
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(40, 40, 40)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(14, 14, 14)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(100, 100, 100)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/P12.jpg"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void restListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restListActionPerformed
@@ -354,7 +280,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         restList2.removeAllItems();
         docname = String.valueOf(restList1.getSelectedItem());
-        System.out.println(docname +" asasas");
+        System.out.println(docname + " asasas");
         populateComboBox2(docname);
 
     }//GEN-LAST:event_restList1ActionPerformed
@@ -381,76 +307,30 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         system.findNetwork(user.getEmployee().getCity()).getEnterpriseDirectory().findEnterprise(hospitalName).getOrganizationDirectory().getDoctorDirectory().findDoctor(docname).updateTimings(timings);
         JOptionPane.showMessageDialog(this, "Appointment fixed");
         dB4OUtil.storeSystem(system);
-        //          System.out.println("timings " + timings);
-        //        if(system.getHospitalDirectory().findHospital(hospitalName).getDoctorDirectory().findDoctor(docname).getDoctorPatientList()==null){
-            //        Patient pa =new Patient();
-            //        ArrayList<Patient> paa = new ArrayList<>();
-            //        pa.setName(user.getEmployee().getName());
-            //        pa.setSymtoms(jTextArea1.getText());
-            //        system.getHospitalDirectory().findHospital(hospitalName).getDoctorDirectory().findDoctor(docname).updateTimings(timings);
-            //        paa.add(pa);
-            //        system.getHospitalDirectory().findHospital(hospitalName).getDoctorDirectory().findDoctor(docname).updateTimings(timings);
-            //        system.getHospitalDirectory().findHospital(hospitalName).getDoctorDirectory().findDoctor(docname).setDoctorPatientList(paa);
-            //        }else{
-            //            Patient pa =new Patient();
-            //        pa.setName(user.getEmployee().getName());
-            //        pa.setSymtoms(jTextArea1.getText());
-            //            System.out.println(system.getHospitalDirectory().findHospital(hospitalName).getDoctorDirectory().findDoctor(docname).getTimings());
-            //        system.getHospitalDirectory().findHospital(hospitalName).getDoctorDirectory().findDoctor(docname).updateTimings(timings);
-            //
-            //         system.getHospitalDirectory().findHospital(hospitalName).getDoctorDirectory().findDoctor(docname).addPatientsToDoctor(pa);
-            //        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        DefaultTableModel dtm = (DefaultTableModel) doctorDetails1.getModel();
+          DefaultTableModel dtm = (DefaultTableModel) doctorDetails1.getModel();
         dtm.setRowCount(0);
-
+       
         for(WorkRequest wq : system.getWorkQueue().findWorkRequestByRec(user)) {
             if(wq instanceof BookAppointment){
                 if(wq.getSender().getEmployee().getName().equals(user.getEmployee().getName())){
-                    System.out.println("comm" + ((BookAppointment) wq).getComments());
-                    Object row[] = new Object[5];
-                    row[0] = wq.getSender().getEmployee().getName();
-                    row[1] = ((BookAppointment) wq).getMeds().getMedicines().get(0);
-                    row[2] = ((BookAppointment) wq).getMeds().getMedicines().get(1);
-                    row[3] = ((BookAppointment) wq).getMeds().getMedicines().get(2);
-                    row[4]=((BookAppointment) wq).getComments();
-                    dtm.addRow(row);
-                }}}
+                System.out.println("comm" + ((BookAppointment) wq).getComments());
+           Object row[] = new Object[5];
+            row[0] = wq.getSender().getEmployee().getName();
+            row[1] = ((BookAppointment) wq).getMeds().getMedicines().get(0);
+            row[2] = ((BookAppointment) wq).getMeds().getMedicines().get(1);
+            row[3] = ((BookAppointment) wq).getMeds().getMedicines().get(2);
+            row[4]=((BookAppointment) wq).getComments();
+            dtm.addRow(row);
+            }}}
+           
+        
 
-                //System.out.println("Res len "+ system.getDoctorDirectory().getDoctorList());
-                //        System.out.println("hooooo" + hospitalName);
-                //         for(int i = 0;i< system.getHospitalDirectory().getHospitalList().size();i++){
-                    //              for(int j = 0;j< system.getHospitalDirectory().getHospitalList().get(i).getDoctorDirectory().getDoctorList().size();j++){
-                        //                   for(int k = 0;k< system.getHospitalDirectory().getHospitalList().get(i).getDoctorDirectory().getDoctorList().get(j).getDoctorPatientList().size();k++){
-                            //                       System.out.println(system.getHospitalDirectory().getHospitalList().get(i).getDoctorDirectory().getDoctorList().get(j).getDoctorPatientList().get(k).getName());
-                            //                       System.out.println(user.getEmployee().getName());
-                            //             if(user.getEmployee().getName().equals(system.getHospitalDirectory().getHospitalList().get(i).getDoctorDirectory().getDoctorList().get(j).getDoctorPatientList().get(k).getName())){
-                                //                 System.out.println("true1 true1 true1");
-                                //
-                                //
-                                //                array1.add(system.getHospitalDirectory().getHospitalList().get(i).getDoctorDirectory().getDoctorList().get(j).getDoctorPatientList().get(k));
-                                //             }else{
-                                //                 System.out.println("nothing");
-                                //
-                                //             }}}
-                    //         }
-                //        for(Patient pa :array1) {
-                    //
-                    //            if(pa.getName().equals(user.getEmployee().getName())){
-                        //                 Object row[] = new Object[5];
-                        //            row[0] = pa;
-                        //            row[1] = pa.getMedicine().getMedicines().get(0);
-                        //             row[2] = pa.getMedicine().getMedicines().get(1);
-                        //              row[3] = pa.getMedicine().getMedicines().get(2);
-                        //               row[4] = pa.getComments();
-                        //            dtm.addRow(row);
-                        //            }
-                    //
-                    //        }
-                jPanel1.setVisible(true);
+         jPanel1.setVisible(true);
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -541,6 +421,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

@@ -68,6 +68,7 @@ public class AddDoctorJpanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(dPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, 164, -1));
@@ -84,7 +85,7 @@ public class AddDoctorJpanel extends javax.swing.JPanel {
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
         jLabel6.setText("Add Doctor");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 300, 37));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 300, 37));
 
         dName1.setPreferredSize(new java.awt.Dimension(15, 30));
         add(dName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 164, -1));
@@ -124,6 +125,10 @@ public class AddDoctorJpanel extends javax.swing.JPanel {
 
         jLabel2.setText("Doctor Name");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/P15.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, 400, 450));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -244,6 +249,7 @@ public class AddDoctorJpanel extends javax.swing.JPanel {
     private javax.swing.JTextField dspe;
     private javax.swing.JTextField dspe1;
     private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
