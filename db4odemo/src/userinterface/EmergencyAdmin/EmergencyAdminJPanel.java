@@ -58,7 +58,7 @@ public class EmergencyAdminJPanel extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, -1, -1));
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(24, 31, 46));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -69,11 +69,11 @@ public class EmergencyAdminJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, -1, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("EMERGENCY ADMIN");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, 280, 30));
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 280, 30));
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 410, 400));
     }// </editor-fold>//GEN-END:initComponents
 

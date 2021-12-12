@@ -87,6 +87,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
         enterpriseLabel = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         deleteDoctor1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -151,6 +152,10 @@ public class DoctorJPanel extends javax.swing.JPanel {
             }
         });
         add(deleteDoctor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/P15.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, -10, 480, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void createNewDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createNewDoctorActionPerformed
@@ -207,6 +212,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
     private javax.swing.JTable doctorDetails;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JButton jButton6;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
