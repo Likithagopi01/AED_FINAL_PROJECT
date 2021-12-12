@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Mudit Mathur
  */
-public class ViewTestBookingJPanel extends javax.swing.JPanel {
+public class ViewTestBookingsJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form ViewTestBookingJPanel
@@ -28,6 +28,7 @@ public class ViewTestBookingJPanel extends javax.swing.JPanel {
     UserAccount userAccount;
     LabDirectory labDirectory;
     Lab lab;
+    
     public ViewTestBookingsJPanel(JPanel userProcessContainer,UserAccount userAccount,EcoSystem system ) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
@@ -35,7 +36,7 @@ public class ViewTestBookingJPanel extends javax.swing.JPanel {
         this.system=system;
         populateTable();
     }
-    public ViewTestBookingJPanel() {
+    public ViewTestBookingsJPanel() {
         initComponents();
     }
 
