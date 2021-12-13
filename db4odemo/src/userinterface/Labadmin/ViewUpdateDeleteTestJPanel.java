@@ -65,9 +65,9 @@ public class ViewUpdateDeleteTestJPanel extends javax.swing.JPanel {
         TestDetailsTable = new javax.swing.JTable();
         enterpriseLabel = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton2.setBackground(new java.awt.Color(24, 31, 46));
@@ -79,7 +79,7 @@ public class ViewUpdateDeleteTestJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 490, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 480, -1, -1));
 
         jButton3.setBackground(new java.awt.Color(24, 31, 46));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,37 +90,43 @@ public class ViewUpdateDeleteTestJPanel extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 210, -1, -1));
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         jLabel5.setText("Lower Range:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, -1, -1));
-        add(lowerRangeTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 340, 116, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, -1, -1));
+        add(lowerRangeTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 116, -1));
 
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         jLabel6.setText("Apparatus:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 420, -1, -1));
-        add(apparatusTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, 116, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, -1, -1));
+        add(apparatusTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 420, 116, -1));
 
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         jLabel7.setText("Upper Range:");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 380, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         jLabel2.setText("Name:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, -1, -1));
 
         upperRangeTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 upperRangeTxtFieldActionPerformed(evt);
             }
         });
-        add(upperRangeTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 380, 116, -1));
+        add(upperRangeTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 380, 116, -1));
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         jLabel3.setText("Price: ");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 450, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         jLabel4.setText("Sample Required:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
-        add(nameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 116, -1));
-        add(sampleTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, 116, -1));
-        add(priceTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 450, 116, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, -1, -1));
+        add(nameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 116, -1));
+        add(sampleTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 310, 116, -1));
+        add(priceTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 450, 116, -1));
 
         TestDetailsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -143,8 +149,8 @@ public class ViewUpdateDeleteTestJPanel extends javax.swing.JPanel {
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 479, 122));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("Test Details");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 180, 30));
+        enterpriseLabel.setText("TEST DETAILS");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 140, 30));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -154,12 +160,10 @@ public class ViewUpdateDeleteTestJPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 410, 310));
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/P5.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 740));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 450, 320));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -302,7 +306,6 @@ public class ViewUpdateDeleteTestJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField lowerRangeTxtField;
     private javax.swing.JTextField nameTxtField;

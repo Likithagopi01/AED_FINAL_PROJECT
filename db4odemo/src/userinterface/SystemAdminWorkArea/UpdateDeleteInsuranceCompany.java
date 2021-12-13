@@ -60,18 +60,16 @@ public class UpdateDeleteInsuranceCompany extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel7 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         nameTxtField = new javax.swing.JTextField();
         addrTxtField = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel3.setText("Username:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 353, 54, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 60, -1));
 
         jButton3.setBackground(new java.awt.Color(24, 31, 46));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -117,9 +115,9 @@ public class UpdateDeleteInsuranceCompany extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 127, -1, 110));
 
-        jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
-        jLabel5.setText("Insurance Details");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 390, 37));
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel5.setText("INSURANCE DETAILS");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 390, 37));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston", "San francisco" }));
         jComboBox1.setPreferredSize(new java.awt.Dimension(140, 30));
@@ -130,8 +128,9 @@ public class UpdateDeleteInsuranceCompany extends javax.swing.JPanel {
         });
         add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 170, -1));
 
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         jLabel6.setText("City Name");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 51, 20));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 60, 20));
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Back");
@@ -141,7 +140,7 @@ public class UpdateDeleteInsuranceCompany extends javax.swing.JPanel {
                 jButton4ActionPerformed(evt);
             }
         });
-        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, -1, -1));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston", "San francisco" }));
         jComboBox2.setPreferredSize(new java.awt.Dimension(140, 30));
@@ -152,19 +151,7 @@ public class UpdateDeleteInsuranceCompany extends javax.swing.JPanel {
         });
         add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 170, -1));
 
-        jLabel7.setText("City Name");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 51, 20));
-
-        jButton5.setBackground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Back");
-        jButton5.setPreferredSize(new java.awt.Dimension(80, 30));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Name:");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 315, 33, -1));
 
@@ -172,8 +159,7 @@ public class UpdateDeleteInsuranceCompany extends javax.swing.JPanel {
         add(nameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(131, 304, 94, -1));
 
         addrTxtField.setPreferredSize(new java.awt.Dimension(164, 30));
-        add(addrTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(131, 348, 94, -1));
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 330, 380));
+        add(addrTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 94, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/P11.gif"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -281,28 +267,12 @@ public class UpdateDeleteInsuranceCompany extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-        //
-        //        Component[] comps = this.userProcessContainer.getComponents();
-        //        for(Component comp : comps){
-            //            if(comp instanceof SystemAdminWorkAreaJPanel){
-                //                SystemAdminWorkAreaJPanel systemAdminWorkAreaJPanel= (SystemAdminWorkAreaJPanel) comp;
-                //                systemAdminWorkAreaJPanel.populateTree();
-                //            }
-            //        }
-    }//GEN-LAST:event_jButton5ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField addrTxtField;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
@@ -310,8 +280,6 @@ public class UpdateDeleteInsuranceCompany extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable labTable;
     private javax.swing.JTextField nameTxtField;

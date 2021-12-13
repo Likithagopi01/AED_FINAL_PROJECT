@@ -83,6 +83,7 @@ public class ViewCurrentPlans extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         nameTxtField.setPreferredSize(new java.awt.Dimension(164, 30));
@@ -91,7 +92,7 @@ public class ViewCurrentPlans extends javax.swing.JPanel {
                 nameTxtFieldActionPerformed(evt);
             }
         });
-        add(nameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(449, 225, 160, -1));
+        add(nameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 160, -1));
 
         yrsTxtField.setPreferredSize(new java.awt.Dimension(164, 30));
         yrsTxtField.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +100,7 @@ public class ViewCurrentPlans extends javax.swing.JPanel {
                 yrsTxtFieldActionPerformed(evt);
             }
         });
-        add(yrsTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(449, 255, 160, -1));
+        add(yrsTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 160, -1));
 
         monthlTxtField.setPreferredSize(new java.awt.Dimension(164, 30));
         monthlTxtField.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +108,7 @@ public class ViewCurrentPlans extends javax.swing.JPanel {
                 monthlTxtFieldActionPerformed(evt);
             }
         });
-        add(monthlTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(449, 285, 160, -1));
+        add(monthlTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 160, -1));
 
         totalTxtField.setPreferredSize(new java.awt.Dimension(164, 30));
         totalTxtField.addActionListener(new java.awt.event.ActionListener() {
@@ -115,42 +116,42 @@ public class ViewCurrentPlans extends javax.swing.JPanel {
                 totalTxtFieldActionPerformed(evt);
             }
         });
-        add(totalTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(449, 345, 160, -1));
+        add(totalTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 160, -1));
 
         jLabel3.setText("Plan Name:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 235, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, -1, -1));
 
         jLabel4.setText("Total years of duration:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 265, 117, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 117, -1));
 
         jLabel5.setText("Monthly premium amount:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 295, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, -1, -1));
 
         jLabel6.setText("Total premium amount:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 355, -1, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, -1, -1));
 
         jLabel7.setText("Purchased on:");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 325, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, -1, -1));
 
         purchaseDateTxtField.setPreferredSize(new java.awt.Dimension(164, 30));
-        add(purchaseDateTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(449, 315, 160, -1));
+        add(purchaseDateTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 160, -1));
 
         jLabel8.setText("Validity:");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 385, -1, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, -1, -1));
 
         validityTxtField.setPreferredSize(new java.awt.Dimension(164, 30));
-        add(validityTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(449, 375, 160, -1));
+        add(validityTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, 160, -1));
 
         jLabel10.setText("Status:");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 415, -1, -1));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, -1, -1));
 
         statusTxtField.setPreferredSize(new java.awt.Dimension(164, 30));
-        add(statusTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(449, 405, 160, -1));
+        add(statusTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 160, -1));
 
         enterpriseLabel.setBackground(new java.awt.Color(255, 255, 255));
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("View Current Plans");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 180, 30));
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 180, 30));
 
         jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Back");
@@ -160,12 +161,11 @@ public class ViewCurrentPlans extends javax.swing.JPanel {
                 jButton7ActionPerformed(evt);
             }
         });
-        add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(9, 85, -1, -1));
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 40, -1, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -40, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/p2.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 2, -1, 600));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 760, 600));
     }// </editor-fold>//GEN-END:initComponents
 
     private void nameTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTxtFieldActionPerformed

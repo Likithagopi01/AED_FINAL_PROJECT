@@ -80,17 +80,19 @@ public class OrderNewInventoryItemJPanel extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         jLabel1.setText("Additional Comments:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(304, 63, 109, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 120, 20));
 
+        QuantityJLabel.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         QuantityJLabel.setText("Quantity");
-        add(QuantityJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 154, -1, -1));
+        add(QuantityJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
 
         CommentsTxtArea.setColumns(20);
         CommentsTxtArea.setRows(5);
         jScrollPane2.setViewportView(CommentsTxtArea);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 59, 186, -1));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 60, 186, -1));
         add(QuantityJTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 149, 138, -1));
 
         SupplierJComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -115,22 +117,23 @@ public class OrderNewInventoryItemJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(InventoryOrderJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 280, -1, 100));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, 100));
 
+        TotalJLabel.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         TotalJLabel.setText("Total:");
-        add(TotalJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 390, 29, -1));
+        add(TotalJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 50, -1));
 
         TotalJTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TotalJTxtFieldActionPerformed(evt);
             }
         });
-        add(TotalJTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 390, 130, -1));
+        add(TotalJTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, 130, -1));
 
         NewOrderJLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         NewOrderJLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        NewOrderJLabel.setText("Hospital Order Dashboard");
-        add(NewOrderJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 0, 560, 23));
+        NewOrderJLabel.setText("HOSPITAL ORDER DASHBOARD");
+        add(NewOrderJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 360, 23));
 
         ConfirmJButton.setBackground(new java.awt.Color(24, 31, 46));
         ConfirmJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -141,10 +144,11 @@ public class OrderNewInventoryItemJPanel extends javax.swing.JPanel {
                 ConfirmJButtonActionPerformed(evt);
             }
         });
-        add(ConfirmJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(301, 390, -1, -1));
+        add(ConfirmJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, -1, -1));
 
+        RestaurantJLabel.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         RestaurantJLabel.setText("Logistics Company");
-        add(RestaurantJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 63, 91, -1));
+        add(RestaurantJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 110, -1));
 
         DeleteJButton.setBackground(new java.awt.Color(24, 31, 46));
         DeleteJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -155,10 +159,11 @@ public class OrderNewInventoryItemJPanel extends javax.swing.JPanel {
                 DeleteJButtonActionPerformed(evt);
             }
         });
-        add(DeleteJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(171, 210, -1, -1));
+        add(DeleteJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
 
+        MenuItemJLabel.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         MenuItemJLabel.setText("Inventory Item");
-        add(MenuItemJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 108, -1, -1));
+        add(MenuItemJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(24, 31, 46));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -169,7 +174,7 @@ public class OrderNewInventoryItemJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 209, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
 
         InventoryItemJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,10 +191,10 @@ public class OrderNewInventoryItemJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 0, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/p9.jpg"))); // NOI18N
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 710, 430));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 810, 480));
 
         jLabel3.setText("jLabel3");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, -1, -1));

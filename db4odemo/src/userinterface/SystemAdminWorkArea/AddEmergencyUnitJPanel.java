@@ -73,7 +73,7 @@ public class AddEmergencyUnitJPanel extends javax.swing.JPanel {
         add(dspe, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, -1, -1));
 
         dUname.setPreferredSize(new java.awt.Dimension(164, 30));
-        add(dUname, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, -1, -1));
+        add(dUname, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, -1));
 
         dPass.setPreferredSize(new java.awt.Dimension(164, 30));
         add(dPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, -1));
@@ -87,7 +87,7 @@ public class AddEmergencyUnitJPanel extends javax.swing.JPanel {
                 addHospitalActionPerformed(evt);
             }
         });
-        add(addHospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
+        add(addHospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston", "San francisco" }));
         jComboBox1.setPreferredSize(new java.awt.Dimension(140, 30));
@@ -106,36 +106,43 @@ public class AddEmergencyUnitJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, 120, 40));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 420, 120, 40));
 
-        jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel8.setText("Add Emergency Unit");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 0, 380, 50));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 380, 50));
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Emergency Unit Name");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 110, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 110, 20));
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel3.setText("Address");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 40, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 50, 20));
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel4.setText("Username");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 50, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 60, 20));
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel5.setText("Password");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 47, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 60, 20));
 
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel6.setText("City Name");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 51, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 70, 20));
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, -1, -1));
 
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel10.setText("Email");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 27, -1));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 40, 20));
 
         dName1.setPreferredSize(new java.awt.Dimension(15, 30));
         add(dName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 164, -1));
 
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel11.setText("Phone");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, 20));
 
         dspe1.setPreferredSize(new java.awt.Dimension(15, 30));
         add(dspe1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 164, -1));

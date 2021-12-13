@@ -71,19 +71,24 @@ public class AddPharmacy extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Pharmacy Name");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 90, 80, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 90, -1));
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel3.setText("Address");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 140, 40, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 50, -1));
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel4.setText("Username");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 320, 50, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 320, 60, -1));
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel5.setText("Password");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 360, 47, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 360, 60, -1));
 
         dName.setPreferredSize(new java.awt.Dimension(164, 30));
         add(dName, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 80, -1, -1));
@@ -118,12 +123,13 @@ public class AddPharmacy extends javax.swing.JPanel {
         });
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 420, 110, 40));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
-        jLabel1.setText("Add Pharmacy");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 17, 270, 37));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel1.setText("ADD PHARMACY");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 310, 37));
 
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel6.setText("City Name");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 190, 51, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 190, 60, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston", "San francisco" }));
         jComboBox1.setPreferredSize(new java.awt.Dimension(140, 30));
@@ -141,15 +147,16 @@ public class AddPharmacy extends javax.swing.JPanel {
         dspe1.setPreferredSize(new java.awt.Dimension(15, 30));
         add(dspe1, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 270, 164, -1));
 
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel8.setText("Email");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 240, 27, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 240, 40, -1));
 
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel9.setText("Phone");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 280, -1, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 280, 50, -1));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/P3.jpg"))); // NOI18N
-        jLabel10.setText("jLabel10");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, -1, 440));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, -1, 370));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addHospitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addHospitalActionPerformed

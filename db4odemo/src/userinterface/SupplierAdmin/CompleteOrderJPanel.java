@@ -74,24 +74,26 @@ public CompleteOrderJPanel(JPanel userProcessContainer,UserAccount userAccount,E
         jButton1 = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Items:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 75, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 200, 75, -1));
 
         patientNameTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 patientNameTxtFieldActionPerformed(evt);
             }
         });
-        add(patientNameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, 150, -1));
-        add(DateBookedTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 250, 150, -1));
+        add(patientNameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 150, -1));
+        add(DateBookedTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 150, -1));
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel5.setText("Date Ordered");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 250, 90, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 90, -1));
 
         InventoryTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -106,7 +108,7 @@ public CompleteOrderJPanel(JPanel userProcessContainer,UserAccount userAccount,E
         ));
         jScrollPane1.setViewportView(InventoryTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 410, 111));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 480, 111));
 
         acceptOrder.setBackground(new java.awt.Color(24, 31, 46));
         acceptOrder.setForeground(new java.awt.Color(255, 255, 255));
@@ -117,7 +119,7 @@ public CompleteOrderJPanel(JPanel userProcessContainer,UserAccount userAccount,E
                 acceptOrderActionPerformed(evt);
             }
         });
-        add(acceptOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, -1, -1));
+        add(acceptOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 90, -1));
 
         declineOrder.setBackground(new java.awt.Color(24, 31, 46));
         declineOrder.setForeground(new java.awt.Color(255, 255, 255));
@@ -128,10 +130,11 @@ public CompleteOrderJPanel(JPanel userProcessContainer,UserAccount userAccount,E
                 declineOrderActionPerformed(evt);
             }
         });
-        add(declineOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, -1, -1));
+        add(declineOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 280, -1, -1));
 
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel8.setText("Assign DeliveryMan:");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, -1, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, -1, -1));
 
         delManCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select" }));
         delManCombo.addActionListener(new java.awt.event.ActionListener() {
@@ -139,7 +142,7 @@ public CompleteOrderJPanel(JPanel userProcessContainer,UserAccount userAccount,E
                 delManComboActionPerformed(evt);
             }
         });
-        add(delManCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 180, -1));
+        add(delManCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 370, 180, -1));
 
         jButton1.setBackground(new java.awt.Color(24, 31, 46));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -150,11 +153,11 @@ public CompleteOrderJPanel(JPanel userProcessContainer,UserAccount userAccount,E
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 410, -1, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("Complete Order");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 260, 30));
+        enterpriseLabel.setText("COMPLETE ORDER");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, 170, 30));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -164,12 +167,10 @@ public CompleteOrderJPanel(JPanel userProcessContainer,UserAccount userAccount,E
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 500, -1, -1));
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 80, 410, 380));
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 420, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/WhatsApp Image 2021-12-12 at 3.10.30 PM (1).jpeg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 670, 550));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, 270));
     }// </editor-fold>//GEN-END:initComponents
 
     private void patientNameTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientNameTxtFieldActionPerformed
@@ -269,7 +270,6 @@ public CompleteOrderJPanel(JPanel userProcessContainer,UserAccount userAccount,E
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField patientNameTxtField;

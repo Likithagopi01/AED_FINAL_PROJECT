@@ -58,7 +58,7 @@ public class SupplierAdminJPanel extends javax.swing.JPanel {
                 jButton4ActionPerformed(evt);
             }
         });
-        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 265, 40));
+        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 265, 40));
 
         jButton3.setBackground(new java.awt.Color(24, 31, 46));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -69,7 +69,7 @@ public class SupplierAdminJPanel extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 260, 40));
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 260, 40));
 
         jButton2.setBackground(new java.awt.Color(24, 31, 46));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -80,15 +80,14 @@ public class SupplierAdminJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 265, 40));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 265, 40));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("Supplier Admin");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 260, 30));
+        enterpriseLabel.setText("SUPPLIER ADMIN");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 170, 30));
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 80, 410, 380));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/p7.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 

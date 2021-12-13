@@ -101,9 +101,9 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         delManTbl = new javax.swing.JTable();
         enterpriseLabel = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         assignJButton.setBackground(new java.awt.Color(24, 31, 46));
@@ -115,7 +115,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
                 assignJButtonActionPerformed(evt);
             }
         });
-        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, -1, -1));
+        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
 
         processJButton.setBackground(new java.awt.Color(24, 31, 46));
         processJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -126,7 +126,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
                 processJButtonActionPerformed(evt);
             }
         });
-        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, -1, -1));
+        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 200, -1, -1));
 
         refreshJButton.setBackground(new java.awt.Color(24, 31, 46));
         refreshJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -137,7 +137,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
                 refreshJButtonActionPerformed(evt);
             }
         });
-        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, -1, -1));
+        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, -1, -1));
 
         delManTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -152,16 +152,14 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(delManTbl);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 730, 100));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 700, 100));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("Delivery Man Dashboard");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 0, 230, 30));
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 470, 250));
+        enterpriseLabel.setText("DELIVERY MAN DASHBOARD");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 270, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/p7.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 740, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 620, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
@@ -212,7 +210,6 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JTable delManTbl;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton processJButton;
     private javax.swing.JButton refreshJButton;

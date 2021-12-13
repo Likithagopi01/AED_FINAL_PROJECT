@@ -59,7 +59,6 @@ public class AddDoctorJpanel extends javax.swing.JPanel {
         dspe1 = new javax.swing.JTextField();
         addDeliveryMan = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         dspe = new javax.swing.JTextField();
         dUname = new javax.swing.JTextField();
@@ -70,6 +69,7 @@ public class AddDoctorJpanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(dPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, 164, -1));
 
@@ -81,11 +81,11 @@ public class AddDoctorJpanel extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
-        jLabel6.setText("Add Doctor");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 300, 37));
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel6.setText("ADD DOCTOR");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 300, 37));
 
         dName1.setPreferredSize(new java.awt.Dimension(15, 30));
         add(dName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 164, -1));
@@ -102,33 +102,44 @@ public class AddDoctorJpanel extends javax.swing.JPanel {
                 addDeliveryManActionPerformed(evt);
             }
         });
-        add(addDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, -1, -1));
+        add(addDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, -1, -1));
 
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel10.setText("Email");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, 410, 310));
 
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel11.setText("Phone");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, -1, -1));
-        add(dspe, new org.netbeans.lib.awtextra.AbsoluteConstraints(281, 180, 164, -1));
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, -1, -1));
+
+        dspe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dspeActionPerformed(evt);
+            }
+        });
+        add(dspe, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 164, -1));
         add(dUname, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 164, -1));
         add(dName, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 164, -1));
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel5.setText("Password");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel4.setText("Username");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel3.setText("Specialization");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 185, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Doctor Name");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/P15.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, 400, 450));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, 360, 570));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -223,6 +234,10 @@ public class AddDoctorJpanel extends javax.swing.JPanel {
             dB4OUtil.storeSystem(system);             }
     }//GEN-LAST:event_addDeliveryManActionPerformed
 
+    private void dspeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dspeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dspeActionPerformed
+
     
         private boolean strongUsername() {
         Pattern pat = Pattern.compile("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$");
@@ -257,6 +272,5 @@ public class AddDoctorJpanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
 }

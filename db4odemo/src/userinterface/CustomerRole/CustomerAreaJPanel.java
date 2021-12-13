@@ -46,13 +46,13 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
      */
     
     
-     private JPanel userProcessContainer;
+    private JPanel userProcessContainer;
 
     private UserAccount user;
     private EcoSystem system;
     private String hospitalName;
-     private String docname;
-     private String timings;
+    private String docname;
+    private String timings;
     private Hospital resObj;
     ArrayList<Patient> array1;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
@@ -129,11 +129,12 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jDateChooser2 = new com.toedter.calendar.JDateChooser();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("Patient Dashboard");
+        enterpriseLabel.setText("PATIENT DASHBOARD");
         add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 180, 30));
 
         restList.addActionListener(new java.awt.event.ActionListener() {
@@ -141,21 +142,21 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 restListActionPerformed(evt);
             }
         });
-        add(restList, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 60, 293, -1));
+        add(restList, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 293, -1));
 
         restList1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 restList1ActionPerformed(evt);
             }
         });
-        add(restList1, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 110, 293, -1));
+        add(restList1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 293, -1));
 
         restList2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 restList2ActionPerformed(evt);
             }
         });
-        add(restList2, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 210, 293, -1));
+        add(restList2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 293, -1));
 
         jButton1.setBackground(new java.awt.Color(24, 31, 46));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -166,13 +167,13 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 350, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, -1, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 250, 290, -1));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 290, -1));
 
         jButton2.setBackground(new java.awt.Color(24, 31, 46));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -250,21 +251,27 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 140, -1, -1));
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 410, 310));
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel1.setText("Select Time");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Select Hospital");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel3.setText("Select Doctor");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel4.setText("DATE");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/P12.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, -1, -1));
+        add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void restListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restListActionPerformed
@@ -292,7 +299,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         timings = String.valueOf(restList2.getSelectedItem());
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
-        Date d = jDateChooser1.getDate();
+        Date d = jDateChooser2.getDate();
         BookAppointment appointment = new BookAppointment();
         appointment.setSender(user);
         System.out.println("ajcjac       "+system.getUserAccountDirectory().findUserAccount(docname));
@@ -414,6 +421,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -67,6 +67,7 @@ public class CompleteEmergencyRequest extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(240, 246, 232));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("Patient Name:");
@@ -107,14 +108,14 @@ public class CompleteEmergencyRequest extends javax.swing.JPanel {
                 jButton4ActionPerformed(evt);
             }
         });
-        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("COMPLETE EMERGENCY REQUEST");
         add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 320, 30));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/p4.jpg"))); // NOI18N
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 400));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-320, 0, 850, 480));
 
         jLabel1.setText("jLabel1");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, -1, -1));

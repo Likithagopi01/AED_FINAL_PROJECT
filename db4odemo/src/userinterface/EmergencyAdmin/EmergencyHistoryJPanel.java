@@ -46,15 +46,14 @@ public class EmergencyHistoryJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         emergencyRequestJTable = new javax.swing.JTable();
         enterpriseLabel = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 410, 310));
 
         emergencyRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -69,11 +68,11 @@ public class EmergencyHistoryJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(emergencyRequestJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 430, 110));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 430, 110));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("Emergency Dashboard");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, 230, 30));
+        enterpriseLabel.setText("EMERGENCY DASHBOARD");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 260, 30));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -83,11 +82,10 @@ public class EmergencyHistoryJPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, -1, -1));
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/p2.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, 10, 680, 350));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 590, 290));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -130,7 +128,6 @@ public class EmergencyHistoryJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
