@@ -54,10 +54,9 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         bookedTestTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -73,7 +72,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(bookedTestTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 499, 136));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, 480, 90));
 
         jButton2.setBackground(new java.awt.Color(24, 31, 46));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -84,11 +83,11 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, -1, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("Manage Orders");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 260, 30));
+        enterpriseLabel.setText("MANAGE ORDERS");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, 170, 30));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -98,16 +97,11 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 270, 100, 40));
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 410, 380));
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, 100, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/WhatsApp Image 2021-12-12 at 3.10.30 PM.jpeg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 300, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/WhatsApp Image 2021-12-12 at 3.10.30 PM (1).jpeg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, -1, 480));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 300, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -155,8 +149,6 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 

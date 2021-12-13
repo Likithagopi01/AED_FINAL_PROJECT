@@ -97,7 +97,6 @@ public class addMedicineJpanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -115,21 +114,23 @@ public class addMedicineJpanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(addMedTbl);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 408, 103));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 350, 103));
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         jLabel1.setText("Medicine Name:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         jLabel2.setText("Medicine Price:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, -1, -1));
 
         medNameTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 medNameTxtActionPerformed(evt);
             }
         });
-        add(medNameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 170, -1));
-        add(medPriceTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 170, -1));
+        add(medNameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 170, -1));
+        add(medPriceTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, 170, -1));
 
         addMedBtn.setBackground(new java.awt.Color(24, 31, 46));
         addMedBtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -140,7 +141,7 @@ public class addMedicineJpanel extends javax.swing.JPanel {
                 addMedBtnActionPerformed(evt);
             }
         });
-        add(addMedBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, -1));
+        add(addMedBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, -1, 30));
 
         jButton1.setBackground(new java.awt.Color(24, 31, 46));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -151,7 +152,7 @@ public class addMedicineJpanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 120, 30));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, 120, 30));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -161,16 +162,15 @@ public class addMedicineJpanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 450, 90, -1));
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 90, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Add Medicine");
         add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 260, 30));
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 410, 380));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/WhatsApp Image 2021-12-12 at 3.10.31 PM.jpeg"))); // NOI18N
         jLabel3.setText("jLabel3");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 870, 550));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 0, 970, 560));
     }// </editor-fold>//GEN-END:initComponents
 
     private void medNameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medNameTxtActionPerformed
@@ -275,7 +275,6 @@ public class addMedicineJpanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField medNameTxt;
     private javax.swing.JTextField medPriceTxt;

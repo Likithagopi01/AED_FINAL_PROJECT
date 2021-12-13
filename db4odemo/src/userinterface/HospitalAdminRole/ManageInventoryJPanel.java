@@ -55,7 +55,7 @@ public class ManageInventoryJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 240, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 240, -1));
 
         jButton3.setBackground(new java.awt.Color(24, 31, 46));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -66,11 +66,11 @@ public class ManageInventoryJPanel extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 237, -1));
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, 237, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("Hospital Supplier Dashboard");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 280, 30));
+        enterpriseLabel.setText("HOSPITAL SUPPLIER DASHBOARD");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, 320, 30));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -80,12 +80,11 @@ public class ManageInventoryJPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, -1, -1));
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, -1, -1));
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 220, 360));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/p10.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 670, 420));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 810));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

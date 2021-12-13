@@ -79,7 +79,7 @@ public class ViewInventoryOrderJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(InventoryRequestJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 100, 550, 97));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 550, 97));
 
         refreshTestJButton.setBackground(new java.awt.Color(24, 31, 46));
         refreshTestJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,7 +90,7 @@ public class ViewInventoryOrderJPanel extends javax.swing.JPanel {
                 refreshTestJButtonActionPerformed(evt);
             }
         });
-        add(refreshTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, -1, -1));
+        add(refreshTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Back");
@@ -100,15 +100,15 @@ public class ViewInventoryOrderJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, 140, 40));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 140, 40));
 
         NewOrderJLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         NewOrderJLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        NewOrderJLabel.setText("Hospital View Order Dashboard");
-        add(NewOrderJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 560, 23));
+        NewOrderJLabel.setText("HOSPITAL VIEW ORDER DASHBOARD");
+        add(NewOrderJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 360, 23));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/p9.jpg"))); // NOI18N
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 380));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 470));
 
         jLabel1.setText("jLabel1");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, -1, -1));

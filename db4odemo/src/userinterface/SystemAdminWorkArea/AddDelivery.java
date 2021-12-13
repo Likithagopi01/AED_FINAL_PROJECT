@@ -73,6 +73,7 @@ public class AddDelivery extends javax.swing.JPanel {
         dspe1 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         dName.setPreferredSize(new java.awt.Dimension(164, 30));
@@ -107,9 +108,9 @@ public class AddDelivery extends javax.swing.JPanel {
         });
         add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 170, -1));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
-        jLabel1.setText("Add Delivery Man");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 360, 37));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel1.setText("ADD DELIVERY MAN");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 380, 37));
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Back");
@@ -119,7 +120,7 @@ public class AddDelivery extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jLabel2.setText("Delivery Man Name");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 96, -1));

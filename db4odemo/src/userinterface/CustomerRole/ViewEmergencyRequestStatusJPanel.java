@@ -52,6 +52,7 @@ public class ViewEmergencyRequestStatusJPanel extends javax.swing.JPanel {
         jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         emergencyStatusJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -67,11 +68,11 @@ public class ViewEmergencyRequestStatusJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(emergencyStatusJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 342, 189));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 342, 100));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("VIEW EMERGENCY REQUEST STATUS");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 370, 30));
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, 370, 30));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -81,10 +82,9 @@ public class ViewEmergencyRequestStatusJPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, -1, -1));
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/P6.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 630, 310));
     }// </editor-fold>//GEN-END:initComponents
 

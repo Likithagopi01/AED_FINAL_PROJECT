@@ -67,16 +67,20 @@ public AddInsurancePlanJPanel(JPanel userProcessContainer,UserAccount userAccoun
         jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Plan Name:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 96, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel3.setText("Total years of duration:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 136, 160, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 120, -1));
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel4.setText("Monthly premium amount:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 176, -1, 20));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, 20));
 
         nameTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,8 +89,9 @@ public AddInsurancePlanJPanel(JPanel userProcessContainer,UserAccount userAccoun
         });
         add(nameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(464, 86, 170, -1));
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel5.setText("Total premium amount:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 216, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, -1, -1));
 
         yrsTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,10 +138,10 @@ public AddInsurancePlanJPanel(JPanel userProcessContainer,UserAccount userAccoun
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, 150, 40));
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, 160, 40));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/WhatsApp Image 2021-12-12 at 3.10.30 PM.jpeg"))); // NOI18N
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 510));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 400));
 
         jLabel1.setText("jLabel1");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, -1, -1));

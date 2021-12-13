@@ -154,6 +154,7 @@ private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
         jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         orderBtn.setBackground(new java.awt.Color(24, 31, 46));
@@ -165,7 +166,7 @@ private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
                 orderBtnActionPerformed(evt);
             }
         });
-        add(orderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 265, -1, -1));
+        add(orderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, 140, -1));
 
         pharmacyCom.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Pharmacy" }));
         pharmacyCom.addActionListener(new java.awt.event.ActionListener() {
@@ -173,10 +174,10 @@ private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
                 pharmacyComActionPerformed(evt);
             }
         });
-        add(pharmacyCom, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 95, 147, -1));
+        add(pharmacyCom, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 147, -1));
 
         jLabel5.setText("Pharmacy:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 95, -1, 20));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, 20));
 
         medTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -199,7 +200,7 @@ private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
         });
         jScrollPane1.setViewportView(medTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 145, 325, 101));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 325, 101));
 
         addcartBtn.setBackground(new java.awt.Color(24, 31, 46));
         addcartBtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -210,7 +211,7 @@ private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
                 addcartBtnActionPerformed(evt);
             }
         });
-        add(addcartBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 265, -1, -1));
+        add(addcartBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -225,7 +226,7 @@ private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
         ));
         jScrollPane3.setViewportView(jTable1);
 
-        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 345, 330, 115));
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 330, 100));
 
         jButton1.setBackground(new java.awt.Color(24, 31, 46));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -236,11 +237,11 @@ private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 475, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 490, -1, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("Patient Pharmacy Order ");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 15, 250, 30));
+        enterpriseLabel.setText("PATIENT PHARMACY ORDER ");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 280, 30));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -250,12 +251,11 @@ private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 15, -1, -1));
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 85, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/project.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, 850, 440));
     }// </editor-fold>//GEN-END:initComponents
 
     private void orderBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderBtnActionPerformed

@@ -63,15 +63,18 @@ public class PrescriptionJPanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Patient Name");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 94, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel3.setText("Medicine 1");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 141, -1, -1));
-        add(dName, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 84, 150, -1));
-        add(dmed, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 131, 150, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, -1, -1));
+        add(dName, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 110, 150, -1));
+        add(dmed, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 150, -1));
 
         jButton1.setBackground(new java.awt.Color(24, 31, 46));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -82,23 +85,26 @@ public class PrescriptionJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(336, 315, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel4.setText("Medicine 2");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 180, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel5.setText("Medicine 3");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 227, -1, -1));
-        add(dmed2, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 175, 150, -1));
-        add(dmed3, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 222, 150, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, -1, -1));
+        add(dmed2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 190, 150, -1));
+        add(dmed3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 230, 150, -1));
 
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel6.setText("Comments");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 265, -1, -1));
-        add(dcomments, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 260, 150, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, -1, -1));
+        add(dcomments, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 270, 150, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("Add Prescription");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 180, 30));
+        enterpriseLabel.setText("ADD PRESCRIPTION");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, 190, 30));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -108,10 +114,10 @@ public class PrescriptionJPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, -1));
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 320, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/p10.png"))); // NOI18N
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 420));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 860, 590));
 
         jLabel1.setText("jLabel1");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, -1, -1));

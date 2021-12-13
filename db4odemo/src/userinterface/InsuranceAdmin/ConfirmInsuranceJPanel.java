@@ -83,12 +83,15 @@ public class ConfirmInsuranceJPanel extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Patient Name:");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 121, -1, -1));
-        add(pnameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 121, 160, -1));
+        add(pnameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 120, 160, -1));
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel3.setText("Plan Name:");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 161, -1, -1));
 
@@ -97,37 +100,43 @@ public class ConfirmInsuranceJPanel extends javax.swing.JPanel {
                 planNameTxtFieldActionPerformed(evt);
             }
         });
-        add(planNameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 151, 160, -1));
+        add(planNameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 150, 160, -1));
 
         yrsTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 yrsTxtFieldActionPerformed(evt);
             }
         });
-        add(yrsTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 191, 160, -1));
-        add(monthTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 221, 160, -1));
-        add(totalTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 261, 160, -1));
+        add(yrsTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, 160, -1));
+        add(monthTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, 160, -1));
+        add(totalTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 260, 160, -1));
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel4.setText("Total Years duration:");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 191, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel5.setText("Monthly Premium Amount:");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 221, -1, -1));
 
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel6.setText("Total Premium Amount:");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 261, -1, -1));
 
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel7.setText("Purchased on:");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 301, -1, -1));
 
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel8.setText("Validity");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 351, -1, -1));
-        add(purchaseDateTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 301, 160, -1));
-        add(validityTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 341, 160, -1));
+        add(purchaseDateTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 160, -1));
+        add(validityTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 340, 160, -1));
 
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel9.setText("Status:");
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 391, -1, -1));
-        add(statusTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 391, 160, -1));
+        add(statusTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 160, -1));
 
         jButton2.setBackground(new java.awt.Color(24, 31, 46));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -138,7 +147,7 @@ public class ConfirmInsuranceJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 451, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, -1, -1));
 
         jButton3.setBackground(new java.awt.Color(24, 31, 46));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -149,7 +158,7 @@ public class ConfirmInsuranceJPanel extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 451, -1, -1));
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, -1, -1));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -162,8 +171,8 @@ public class ConfirmInsuranceJPanel extends javax.swing.JPanel {
         add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 520, 100, 40));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("Confirm Insurance");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 41, 260, 30));
+        enterpriseLabel.setText("CONFIRM INSURANCE");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 50, 260, 30));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/WhatsApp Image 2021-12-12 at 3.10.30 PM.jpeg"))); // NOI18N
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 310, 540));

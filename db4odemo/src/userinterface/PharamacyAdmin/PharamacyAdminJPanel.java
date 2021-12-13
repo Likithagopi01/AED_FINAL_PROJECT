@@ -60,7 +60,6 @@ public PharamacyAdminJPanel(JPanel userProcessContainer, UserAccount ua,EcoSyste
         manageEmployeeJButton = new javax.swing.JButton();
         manageOrganizationJButton = new javax.swing.JButton();
         enterpriseLabel1 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -74,7 +73,7 @@ public PharamacyAdminJPanel(JPanel userProcessContainer, UserAccount ua,EcoSyste
                 manageEmployeeJButtonActionPerformed(evt);
             }
         });
-        add(manageEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 210, -1));
+        add(manageEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 210, -1));
 
         manageOrganizationJButton.setBackground(new java.awt.Color(24, 31, 46));
         manageOrganizationJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -85,16 +84,15 @@ public PharamacyAdminJPanel(JPanel userProcessContainer, UserAccount ua,EcoSyste
                 manageOrganizationJButtonActionPerformed(evt);
             }
         });
-        add(manageOrganizationJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 210, -1));
+        add(manageOrganizationJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 210, -1));
 
         enterpriseLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel1.setText("Pharmacy Admin");
-        add(enterpriseLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 260, 30));
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 410, 380));
+        enterpriseLabel1.setText("PHARMACY ADMIN");
+        add(enterpriseLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 180, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/P12.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, -20, 910, 670));
     }// </editor-fold>//GEN-END:initComponents
 
     private void manageEmployeeJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageEmployeeJButtonActionPerformed
@@ -119,7 +117,6 @@ public PharamacyAdminJPanel(JPanel userProcessContainer, UserAccount ua,EcoSyste
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel enterpriseLabel1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JButton manageEmployeeJButton;
     private javax.swing.JButton manageOrganizationJButton;
     // End of variables declaration//GEN-END:variables

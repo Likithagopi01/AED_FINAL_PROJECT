@@ -56,6 +56,7 @@ public class ViewTestBookingsJPanel extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         testsBookedTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -71,7 +72,7 @@ public class ViewTestBookingsJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(testsBookedTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 59, 687, 113));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 59, 680, 113));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("VIEW TEST BOOKINGS");
@@ -85,12 +86,11 @@ public class ViewTestBookingsJPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 9, -1, -1));
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 199, 410, 310));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/P15.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, -20, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed

@@ -56,26 +56,30 @@ public AddInventoryItemJPanel(JPanel userProcessContainer,UserAccount userAccoun
         jButton2 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Name:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, -1, -1));
-        add(nameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 150, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, -1, -1));
+        add(nameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 100, 150, -1));
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel3.setText("Manufacturer:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, -1, -1));
-        add(manufacTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, 150, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, -1, -1));
+        add(manufacTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 140, 150, -1));
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel4.setText("Price per Item:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, -1, -1));
-        add(priceTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, 150, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, -1, -1));
+        add(priceTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 190, 150, -1));
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel5.setText("Number of units available: ");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, -1, -1));
-        add(availTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, 150, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, -1, -1));
+        add(availTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 230, 150, -1));
 
         jButton2.setBackground(new java.awt.Color(24, 31, 46));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -86,7 +90,7 @@ public AddInventoryItemJPanel(JPanel userProcessContainer,UserAccount userAccoun
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, 110, 40));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 110, 40));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Back");
@@ -96,16 +100,14 @@ public AddInventoryItemJPanel(JPanel userProcessContainer,UserAccount userAccoun
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 110, 40));
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 280, 110, 40));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("Add Inventory Items");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 260, 30));
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 80, 410, 380));
+        enterpriseLabel.setText("ADD INVENTORY ITEMS");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 230, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/WhatsApp Image 2021-12-12 at 3.10.30 PM (2).jpeg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, -20, 590, 420));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, -20, 400, 270));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -182,7 +184,6 @@ public AddInventoryItemJPanel(JPanel userProcessContainer,UserAccount userAccoun
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField manufacTxtField;
     private javax.swing.JTextField nameTxtField;
     private javax.swing.JTextField priceTxtField;
